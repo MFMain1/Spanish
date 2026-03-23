@@ -1222,584 +1222,206 @@ function buildSupplemental() {
 const FC_DECKS = {
 
 "Essentials":[
-  {es:"hola",en:"hello",pos:"greeting",ph:"OH-lah",ex:"¡<em>Hola</em>, ¿cómo estás?"},
+  {es:"hola",en:"hello",pos:"greeting",ph:"OH-lah",ex:"¡<em>Hola</em>! ¿Cómo estás?"},
   {es:"adiós",en:"goodbye",pos:"greeting",ph:"ah-DYOS",ex:"<em>Adiós</em>, hasta mañana"},
   {es:"buenos días",en:"good morning",pos:"greeting",ph:"BWEH-nohs DEE-ahs",ex:"<em>Buenos días</em>, ¿cómo amaneciste?"},
-  {es:"buenas tardes",en:"good afternoon",pos:"greeting",ph:"BWEH-nahs TAR-dehs",ex:"<em>Buenas tardes</em>, señora"},
+  {es:"buenas tardes",en:"good afternoon",pos:"greeting",ph:"BWEH-nahs TAR-dehs",ex:"<em>Buenas tardes</em>"},
   {es:"buenas noches",en:"good night",pos:"greeting",ph:"BWEH-nahs NOH-chehs",ex:"<em>Buenas noches</em>, que descanses"},
   {es:"gracias",en:"thank you",pos:"expression",ph:"GRAH-syahs",ex:"Muchas <em>gracias</em>"},
   {es:"de nada",en:"you're welcome",pos:"expression",ph:"deh NAH-dah",ex:"<em>De nada</em>, con gusto"},
   {es:"por favor",en:"please",pos:"expression",ph:"por fah-VOR",ex:"Un café, <em>por favor</em>"},
-  {es:"perdón",en:"excuse me / sorry",pos:"expression",ph:"pehr-DON",ex:"<em>Perdón</em>, ¿me puedes ayudar?"},
+  {es:"perdón",en:"excuse me",pos:"expression",ph:"pehr-DON",ex:"<em>Perdón</em>, ¿me ayudas?"},
   {es:"lo siento",en:"I'm sorry",pos:"expression",ph:"loh SYEN-toh",ex:"<em>Lo siento</em> mucho"},
-  {es:"sí",en:"yes",pos:"adverb",ph:"see",ex:"<em>Sí</em>, claro que sí"},
+  {es:"sí",en:"yes",pos:"adverb",ph:"see",ex:"<em>Sí</em>, claro"},
   {es:"no",en:"no",pos:"adverb",ph:"noh",ex:"<em>No</em>, gracias"},
-  {es:"tal vez",en:"maybe / perhaps",pos:"adverb",ph:"tal behs",ex:"<em>Tal vez</em> mañana voy"},
-  {es:"¿cómo te llamas?",en:"what is your name?",pos:"phrase",ph:"KOH-moh teh YAH-mahs",ex:"<em>¿Cómo te llamas?</em> — Me llamo Ana"},
-  {es:"me llamo...",en:"my name is...",pos:"phrase",ph:"meh YAH-moh",ex:"<em>Me llamo</em> Matthew"},
-  {es:"mucho gusto",en:"nice to meet you",pos:"expression",ph:"MOO-choh GOOS-toh",ex:"<em>Mucho gusto</em> en conocerte"},
-  {es:"igualmente",en:"likewise / same to you",pos:"expression",ph:"ee-gwal-MEN-teh",ex:"<em>Igualmente</em>, un placer"},
+  {es:"mucho gusto",en:"nice to meet you",pos:"expression",ph:"MOO-choh GOOS-toh",ex:"<em>Mucho gusto</em>"},
   {es:"no entiendo",en:"I don't understand",pos:"phrase",ph:"noh en-TYEN-doh",ex:"<em>No entiendo</em>, ¿puedes repetir?"},
-  {es:"háblame más despacio",en:"speak more slowly to me",pos:"phrase",ph:"AH-blah-meh mahs dehs-PAH-syoh",ex:"<em>Háblame más despacio</em>, por favor"},
-  {es:"¿cómo se dice?",en:"how do you say?",pos:"phrase",ph:"KOH-moh seh DEE-seh",ex:"<em>¿Cómo se dice</em> 'friend' en español?"},
-  {es:"¿puedes repetir?",en:"can you repeat?",pos:"phrase",ph:"PWEH-dehs reh-peh-TEER",ex:"<em>¿Puedes repetir</em>, por favor?"},
-  {es:"no sé",en:"I don't know",pos:"phrase",ph:"noh seh",ex:"<em>No sé</em> la respuesta"},
-  {es:"claro",en:"of course / clear",pos:"expression",ph:"KLAH-roh",ex:"<em>Claro</em>, con todo el gusto"},
-  {es:"está bien",en:"it's fine / okay",pos:"expression",ph:"ehs-TAH byen",ex:"<em>Está bien</em>, no hay problema"},
-  {es:"¿qué pasa?",en:"what's happening? / what's up?",pos:"phrase",ph:"keh PAH-sah",ex:"<em>¿Qué pasa?</em> ¿Todo bien?"},
-  {es:"¿cómo estás?",en:"how are you? (informal)",pos:"phrase",ph:"KOH-moh ehs-TAHS",ex:"<em>¿Cómo estás?</em> — Bien, ¿y tú?"},
-  {es:"bien, gracias",en:"fine, thank you",pos:"phrase",ph:"byen GRAH-syahs",ex:"— <em>Bien, gracias</em>, ¿y usted?"},
-  {es:"más o menos",en:"so-so / more or less",pos:"expression",ph:"mahs oh MEH-nohs",ex:"¿Cómo estás? <em>Más o menos</em>"},
-  {es:"hasta luego",en:"see you later",pos:"expression",ph:"AHS-tah LWEH-goh",ex:"<em>Hasta luego</em>, cuídate"},
-  {es:"hasta mañana",en:"see you tomorrow",pos:"expression",ph:"AHS-tah mah-NYAH-nah",ex:"<em>Hasta mañana</em>, que descanses"},
-],
-
-"Numbers":[
-  {es:"cero",en:"zero",pos:"number",ph:"SEH-roh",ex:"Mi batería está en <em>cero</em>"},
-  {es:"uno",en:"one",pos:"number",ph:"OO-noh",ex:"Tengo <em>un</em> hermano"},
-  {es:"dos",en:"two",pos:"number",ph:"dohs",ex:"<em>Dos</em> cervezas, por favor"},
-  {es:"tres",en:"three",pos:"number",ph:"trehs",ex:"Son las <em>tres</em> de la tarde"},
-  {es:"cuatro",en:"four",pos:"number",ph:"KWAH-troh",ex:"<em>Cuatro</em> personas en la mesa"},
-  {es:"cinco",en:"five",pos:"number",ph:"SEEN-koh",ex:"Tengo <em>cinco</em> minutos"},
-  {es:"seis",en:"six",pos:"number",ph:"says",ex:"Son las <em>seis</em> en punto"},
-  {es:"siete",en:"seven",pos:"number",ph:"SYEH-teh",ex:"Hay <em>siete</em> días en la semana"},
-  {es:"ocho",en:"eight",pos:"number",ph:"OH-choh",ex:"<em>Ocho</em> horas de sueño"},
-  {es:"nueve",en:"nine",pos:"number",ph:"NWEH-beh",ex:"El vuelo sale a las <em>nueve</em>"},
-  {es:"diez",en:"ten",pos:"number",ph:"dyehs",ex:"<em>Diez</em> dólares, por favor"},
-  {es:"once",en:"eleven",pos:"number",ph:"ON-seh",ex:"La reunión es a las <em>once</em>"},
-  {es:"doce",en:"twelve",pos:"number",ph:"DOH-seh",ex:"Son las <em>doce</em> del mediodía"},
-  {es:"trece",en:"thirteen",pos:"number",ph:"TREH-seh",ex:"Hay <em>trece</em> personas"},
-  {es:"catorce",en:"fourteen",pos:"number",ph:"kah-TOR-seh",ex:"Tiene <em>catorce</em> años"},
-  {es:"quince",en:"fifteen",pos:"number",ph:"KEEN-seh",ex:"Espera <em>quince</em> minutos"},
-  {es:"veinte",en:"twenty",pos:"number",ph:"BEYN-teh",ex:"Tengo <em>veinte</em> años"},
-  {es:"veintiuno",en:"twenty-one",pos:"number",ph:"bayn-tee-OO-noh",ex:"Hay <em>veintiún</em> estudiantes"},
-  {es:"treinta",en:"thirty",pos:"number",ph:"TREYN-tah",ex:"Cuesta <em>treinta</em> dólares"},
-  {es:"cuarenta",en:"forty",pos:"number",ph:"kwah-REN-tah",ex:"Tengo <em>cuarenta</em> mensajes"},
-  {es:"cincuenta",en:"fifty",pos:"number",ph:"seen-KWEN-tah",ex:"Hay <em>cincuenta</em> estados"},
-  {es:"sesenta",en:"sixty",pos:"number",ph:"seh-SEN-tah",ex:"Un minuto tiene <em>sesenta</em> segundos"},
-  {es:"setenta",en:"seventy",pos:"number",ph:"seh-TEN-tah",ex:"Mi abuela tiene <em>setenta</em> años"},
-  {es:"ochenta",en:"eighty",pos:"number",ph:"oh-CHEN-tah",ex:"<em>Ochenta</em> kilómetros por hora"},
-  {es:"noventa",en:"ninety",pos:"number",ph:"noh-BEN-tah",ex:"<em>Noventa</em> por ciento"},
-  {es:"cien",en:"one hundred",pos:"number",ph:"syen",ex:"<em>Cien</em> personas asistieron"},
-  {es:"doscientos",en:"two hundred",pos:"number",ph:"doh-SYEN-tohs",ex:"Cuesta <em>doscientos</em> pesos"},
-  {es:"mil",en:"one thousand",pos:"number",ph:"meel",ex:"Cuesta <em>mil</em> dólares"},
-  {es:"un millón",en:"one million",pos:"number",ph:"oon mee-YON",ex:"<em>Un millón</em> de gracias"},
-  {es:"primero",en:"first",pos:"ordinal",ph:"pree-MEH-roh",ex:"El <em>primero</em> de enero"},
-  {es:"segundo",en:"second",pos:"ordinal",ph:"seh-GOON-doh",ex:"El <em>segundo</em> piso"},
-  {es:"tercero",en:"third",pos:"ordinal",ph:"tehr-SEH-roh",ex:"El <em>tercer</em> día"},
-  {es:"último",en:"last / final",pos:"ordinal",ph:"OOL-tee-moh",ex:"El <em>último</em> tren de la noche"},
-],
-
-"Days & Time":[
-  {es:"lunes",en:"Monday",pos:"noun",ph:"LOO-nehs",ex:"El <em>lunes</em> tengo clase"},
-  {es:"martes",en:"Tuesday",pos:"noun",ph:"MAR-tehs",ex:"El <em>martes</em> voy al médico"},
-  {es:"miércoles",en:"Wednesday",pos:"noun",ph:"MYEHR-koh-lehs",ex:"El <em>miércoles</em> en la noche salimos"},
-  {es:"jueves",en:"Thursday",pos:"noun",ph:"HWEH-behs",ex:"El <em>jueves</em> tengo reunión"},
-  {es:"viernes",en:"Friday",pos:"noun",ph:"BYEHR-nehs",ex:"El <em>viernes</em> es mi favorito"},
-  {es:"sábado",en:"Saturday",pos:"noun",ph:"SAH-bah-doh",ex:"El <em>sábado</em> dormimos hasta tarde"},
-  {es:"domingo",en:"Sunday",pos:"noun",ph:"doh-MEEN-goh",ex:"El <em>domingo</em> vamos a la playa"},
-  {es:"hoy",en:"today",pos:"adverb",ph:"oy",ex:"<em>Hoy</em> es martes, ¿verdad?"},
-  {es:"ayer",en:"yesterday",pos:"adverb",ph:"ah-YEHR",ex:"<em>Ayer</em> llovió mucho"},
-  {es:"mañana",en:"tomorrow",pos:"adverb",ph:"mah-NYAH-nah",ex:"<em>Mañana</em> te llamo"},
-  {es:"ahora",en:"now",pos:"adverb",ph:"ah-OH-rah",ex:"Ven <em>ahora</em> mismo"},
-  {es:"después",en:"later / after",pos:"adverb",ph:"dehs-PWES",ex:"Hablamos <em>después</em>"},
-  {es:"antes",en:"before / earlier",pos:"adverb",ph:"AHN-tehs",ex:"Llama <em>antes</em> de venir"},
-  {es:"temprano",en:"early",pos:"adverb",ph:"tem-PRAH-noh",ex:"Llegué muy <em>temprano</em>"},
-  {es:"tarde",en:"late",pos:"adverb",ph:"TAR-deh",ex:"Siempre llega <em>tarde</em>"},
-  {es:"ya",en:"already / now",pos:"adverb",ph:"yah",ex:"<em>Ya</em> terminé, vamos"},
-  {es:"todavía",en:"still / yet",pos:"adverb",ph:"toh-dah-BEE-ah",ex:"<em>Todavía</em> no ha llegado"},
-  {es:"¿qué hora es?",en:"what time is it?",pos:"phrase",ph:"keh OH-rah ehs",ex:"<em>¿Qué hora es?</em> Son las tres"},
-  {es:"por la mañana",en:"in the morning",pos:"phrase",ph:"por lah mah-NYAH-nah",ex:"Hago ejercicio <em>por la mañana</em>"},
-  {es:"por la tarde",en:"in the afternoon",pos:"phrase",ph:"por lah TAR-deh",ex:"Trabajo <em>por la tarde</em>"},
-  {es:"por la noche",en:"at night",pos:"phrase",ph:"por lah NOH-cheh",ex:"Estudiamos <em>por la noche</em>"},
-  {es:"el fin de semana",en:"the weekend",pos:"phrase",ph:"el feen deh seh-MAH-nah",ex:"Este <em>fin de semana</em> vamos de viaje"},
-  {es:"la semana pasada",en:"last week",pos:"phrase",ph:"lah seh-MAH-nah pah-SAH-dah",ex:"<em>La semana pasada</em> fuimos al cine"},
-  {es:"la semana que viene",en:"next week",pos:"phrase",ph:"lah seh-MAH-nah keh BYEH-neh",ex:"<em>La semana que viene</em> te visito"},
-  {es:"hace + time",en:"ago (time expression)",pos:"phrase",ph:"AH-seh",ex:"<em>Hace</em> dos horas llamaste"},
-  {es:"desde",en:"since / from",pos:"preposition",ph:"DEHS-deh",ex:"Vivo aquí <em>desde</em> enero"},
-],
-
-"Months & Seasons":[
-  {es:"enero",en:"January",pos:"noun",ph:"eh-NEH-roh",ex:"Mi cumpleaños es en <em>enero</em>"},
-  {es:"febrero",en:"February",pos:"noun",ph:"feh-BREH-roh",ex:"<em>Febrero</em> tiene 28 días"},
-  {es:"marzo",en:"March",pos:"noun",ph:"MAR-soh",ex:"La primavera empieza en <em>marzo</em>"},
-  {es:"abril",en:"April",pos:"noun",ph:"ah-BREEL",ex:"Llueve mucho en <em>abril</em>"},
-  {es:"mayo",en:"May",pos:"noun",ph:"MAH-yoh",ex:"El Día de las Madres es en <em>mayo</em>"},
-  {es:"junio",en:"June",pos:"noun",ph:"HOO-nyoh",ex:"El verano empieza en <em>junio</em>"},
-  {es:"julio",en:"July",pos:"noun",ph:"HOO-lyoh",ex:"Viajamos en <em>julio</em>"},
-  {es:"agosto",en:"August",pos:"noun",ph:"ah-GOHS-toh",ex:"<em>Agosto</em> es muy caluroso"},
-  {es:"septiembre",en:"September",pos:"noun",ph:"sep-TYEM-breh",ex:"Empezamos clases en <em>septiembre</em>"},
-  {es:"octubre",en:"October",pos:"noun",ph:"ok-TOO-breh",ex:"En <em>octubre</em> hace fresco"},
-  {es:"noviembre",en:"November",pos:"noun",ph:"noh-BYEM-breh",ex:"<em>Noviembre</em> es mes de lluvia"},
-  {es:"diciembre",en:"December",pos:"noun",ph:"dee-SYEM-breh",ex:"La Navidad es en <em>diciembre</em>"},
-  {es:"la primavera",en:"spring",pos:"noun",ph:"lah pree-mah-BEH-rah",ex:"Me encanta la <em>primavera</em>"},
-  {es:"el verano",en:"summer",pos:"noun",ph:"el beh-RAH-noh",ex:"En <em>verano</em> vamos a la playa"},
-  {es:"el otoño",en:"autumn / fall",pos:"noun",ph:"el oh-TOH-nyoh",ex:"Las hojas caen en <em>otoño</em>"},
-  {es:"el invierno",en:"winter",pos:"noun",ph:"el een-BYEHR-noh",ex:"En <em>invierno</em> hace frío"},
+  {es:"háblame más despacio",en:"speak more slowly",pos:"phrase",ph:"AH-blah-meh mahs dehs-PAH-syoh",ex:"<em>Háblame más despacio</em>, por favor"},
+  {es:"¿cómo estás?",en:"how are you?",pos:"phrase",ph:"KOH-moh ehs-TAHS",ex:"<em>¿Cómo estás?</em> Bien, ¿y tú?"},
+  {es:"bien, gracias",en:"fine, thank you",pos:"phrase",ph:"byen GRAH-syahs",ex:"<em>Bien, gracias</em>"},
+  {es:"más o menos",en:"so-so",pos:"expression",ph:"mahs oh MEH-nohs",ex:"<em>Más o menos</em>"},
+  {es:"hasta luego",en:"see you later",pos:"expression",ph:"AHS-tah LWEH-goh",ex:"<em>Hasta luego</em>"},
+  {es:"claro",en:"of course",pos:"expression",ph:"KLAH-roh",ex:"<em>Claro</em>, con gusto"},
+  {es:"no sé",en:"I don't know",pos:"phrase",ph:"noh seh",ex:"<em>No sé</em>"},
+  {es:"¿qué pasa?",en:"what's up?",pos:"phrase",ph:"keh PAH-sah",ex:"<em>¿Qué pasa?</em>"},
+  {es:"está bien",en:"okay / it's fine",pos:"expression",ph:"ehs-TAH byen",ex:"<em>Está bien</em>"},
+  {es:"por supuesto",en:"of course",pos:"expression",ph:"por soo-PWES-toh",ex:"<em>Por supuesto</em>"},
+  {es:"me llamo...",en:"my name is...",pos:"phrase",ph:"meh YAH-moh",ex:"<em>Me llamo</em> Matthew"},
 ],
 
 "Core Verbs":[
   {es:"ser",en:"to be (permanent)",pos:"verb",ph:"sehr",ex:"Yo <em>soy</em> americano"},
-  {es:"estar",en:"to be (temporary/location)",pos:"verb",ph:"ehs-TAR",ex:"<em>Estoy</em> en casa ahora"},
+  {es:"estar",en:"to be (temp/location)",pos:"verb",ph:"ehs-TAR",ex:"<em>Estoy</em> en casa"},
   {es:"tener",en:"to have",pos:"verb",ph:"teh-NEHR",ex:"Ella <em>tiene</em> dos gatos"},
-  {es:"hacer",en:"to do / make",pos:"verb",ph:"ah-SEHR",ex:"¿Qué <em>haces</em> esta noche?"},
+  {es:"hacer",en:"to do / make",pos:"verb",ph:"ah-SEHR",ex:"¿Qué <em>haces</em>?"},
   {es:"ir",en:"to go",pos:"verb",ph:"eer",ex:"<em>Vamos</em> al mercado"},
-  {es:"venir",en:"to come",pos:"verb",ph:"beh-NEER",ex:"¿<em>Vienes</em> con nosotros?"},
-  {es:"querer",en:"to want / to love",pos:"verb",ph:"keh-REHR",ex:"Yo te <em>quiero</em> mucho"},
-  {es:"poder",en:"can / to be able to",pos:"verb",ph:"poh-DEHR",ex:"¿<em>Puedes</em> ayudarme?"},
-  {es:"saber",en:"to know (facts/skills)",pos:"verb",ph:"sah-BEHR",ex:"No <em>sé</em> la respuesta"},
+  {es:"venir",en:"to come",pos:"verb",ph:"beh-NEER",ex:"¿<em>Vienes</em> conmigo?"},
+  {es:"querer",en:"to want / love",pos:"verb",ph:"keh-REHR",ex:"Yo te <em>quiero</em>"},
+  {es:"poder",en:"can / to be able",pos:"verb",ph:"poh-DEHR",ex:"¿<em>Puedes</em> ayudarme?"},
+  {es:"saber",en:"to know (facts)",pos:"verb",ph:"sah-BEHR",ex:"No <em>sé</em> la respuesta"},
   {es:"conocer",en:"to know (person/place)",pos:"verb",ph:"koh-noh-SEHR",ex:"<em>Conozco</em> a su familia"},
-  {es:"hablar",en:"to speak",pos:"verb",ph:"ah-BLAR",ex:"<em>Hablo</em> español un poco"},
-  {es:"escuchar",en:"to listen",pos:"verb",ph:"ehs-koo-CHAR",ex:"Me gusta <em>escuchar</em> música"},
-  {es:"ver",en:"to see / watch",pos:"verb",ph:"behr",ex:"<em>Veo</em> la televisión"},
-  {es:"leer",en:"to read",pos:"verb",ph:"leh-EHR",ex:"Me gusta <em>leer</em> por las noches"},
-  {es:"escribir",en:"to write",pos:"verb",ph:"ehs-kree-BEER",ex:"<em>Escribo</em> en mi diario"},
+  {es:"hablar",en:"to speak",pos:"verb",ph:"ah-BLAR",ex:"<em>Hablo</em> español"},
   {es:"comer",en:"to eat",pos:"verb",ph:"koh-MEHR",ex:"¿Qué quieres <em>comer</em>?"},
-  {es:"beber / tomar",en:"to drink",pos:"verb",ph:"beh-BEHR / toh-MAR",ex:"<em>Tomo</em> café cada mañana"},
-  {es:"dormir",en:"to sleep",pos:"verb",ph:"dor-MEER",ex:"Necesito <em>dormir</em> más"},
+  {es:"beber",en:"to drink",pos:"verb",ph:"beh-BEHR",ex:"<em>Bebo</em> café"},
+  {es:"dormir",en:"to sleep",pos:"verb",ph:"dor-MEER",ex:"Necesito <em>dormir</em>"},
   {es:"trabajar",en:"to work",pos:"verb",ph:"trah-bah-HAR",ex:"<em>Trabajo</em> desde casa"},
   {es:"vivir",en:"to live",pos:"verb",ph:"bee-BEER",ex:"<em>Vivo</em> en Florida"},
-  {es:"llamar",en:"to call",pos:"verb",ph:"yah-MAR",ex:"Voy a <em>llamarte</em> ahora"},
+  {es:"llamar",en:"to call",pos:"verb",ph:"yah-MAR",ex:"Te voy a <em>llamar</em>"},
   {es:"comprar",en:"to buy",pos:"verb",ph:"kohm-PRAR",ex:"Quiero <em>comprar</em> esto"},
-  {es:"necesitar",en:"to need",pos:"verb",ph:"neh-seh-see-TAR",ex:"<em>Necesito</em> tu ayuda"},
-  {es:"gustar",en:"to like / to please",pos:"verb",ph:"goos-TAR",ex:"Me <em>gusta</em> mucho"},
-  {es:"encantar",en:"to love / to adore",pos:"verb",ph:"en-kan-TAR",ex:"Me <em>encanta</em> la música latina"},
-  {es:"pedir",en:"to ask for / order",pos:"verb",ph:"peh-DEER",ex:"Voy a <em>pedir</em> la sopa"},
-  {es:"pensar",en:"to think",pos:"verb",ph:"pen-SAR",ex:"¿Qué <em>piensas</em> de esto?"},
-  {es:"creer",en:"to believe / think",pos:"verb",ph:"kreh-EHR",ex:"No <em>creo</em> que sea verdad"},
-  {es:"llevar",en:"to carry / wear / take",pos:"verb",ph:"yeh-BAR",ex:"Te <em>llevo</em> al aeropuerto"},
-  {es:"traer",en:"to bring",pos:"verb",ph:"trah-EHR",ex:"¿Me <em>traes</em> agua?"},
-  {es:"salir",en:"to leave / go out",pos:"verb",ph:"sah-LEER",ex:"¿A qué hora <em>sales</em>?"},
-  {es:"llegar",en:"to arrive",pos:"verb",ph:"yeh-GAR",ex:"<em>Llegué</em> a las ocho"},
-  {es:"buscar",en:"to look for",pos:"verb",ph:"boos-KAR",ex:"<em>Busco</em> mis llaves"},
-  {es:"encontrar",en:"to find",pos:"verb",ph:"en-kon-TRAR",ex:"No puedo <em>encontrar</em> mi teléfono"},
-  {es:"dar",en:"to give",pos:"verb",ph:"dar",ex:"¿Me <em>das</em> tu número?"},
+  {es:"necesitar",en:"to need",pos:"verb",ph:"neh-seh-see-TAR",ex:"<em>Necesito</em> ayuda"},
+  {es:"gustar",en:"to like",pos:"verb",ph:"goos-TAR",ex:"Me <em>gusta</em> mucho"},
+  {es:"encantar",en:"to love/adore",pos:"verb",ph:"en-kan-TAR",ex:"Me <em>encanta</em> la música"},
+  {es:"pedir",en:"to order / ask for",pos:"verb",ph:"peh-DEER",ex:"Voy a <em>pedir</em> la sopa"},
+  {es:"pensar",en:"to think",pos:"verb",ph:"pen-SAR",ex:"¿Qué <em>piensas</em>?"},
   {es:"decir",en:"to say / tell",pos:"verb",ph:"deh-SEER",ex:"¿Qué <em>dices</em>?"},
-  {es:"sentir",en:"to feel / to regret",pos:"verb",ph:"sen-TEER",ex:"¿Cómo te <em>sientes</em>?"},
-  {es:"empezar",en:"to start / begin",pos:"verb",ph:"em-peh-SAR",ex:"¿Cuándo <em>empezamos</em>?"},
-  {es:"terminar",en:"to finish / end",pos:"verb",ph:"tehr-mee-NAR",ex:"Ya <em>terminé</em> el trabajo"},
-  {es:"esperar",en:"to wait / hope",pos:"verb",ph:"ehs-peh-RAR",ex:"<em>Espérate</em> un momento"},
-  {es:"olvidar",en:"to forget",pos:"verb",ph:"ol-bee-DAR",ex:"No <em>olvides</em> el pasaporte"},
-  {es:"recordar",en:"to remember",pos:"verb",ph:"reh-kor-DAR",ex:"¿<em>Recuerdas</em> cuando...?"},
+  {es:"sentir",en:"to feel",pos:"verb",ph:"sen-TEER",ex:"¿Cómo te <em>sientes</em>?"},
   {es:"aprender",en:"to learn",pos:"verb",ph:"ah-pren-DEHR",ex:"Quiero <em>aprender</em> español"},
-  {es:"entender",en:"to understand",pos:"verb",ph:"en-ten-DEHR",ex:"No <em>entiendo</em> bien"},
-  {es:"ayudar",en:"to help",pos:"verb",ph:"ah-yoo-DAR",ex:"¿Me <em>ayudas</em>?"},
-  {es:"volver",en:"to return / come back",pos:"verb",ph:"bol-BEHR",ex:"¿Cuándo <em>vuelves</em>?"},
-  {es:"pasar",en:"to happen / pass / spend",pos:"verb",ph:"pah-SAR",ex:"¿Qué <em>pasó</em>?"},
-  {es:"quedar",en:"to stay / be located",pos:"verb",ph:"keh-DAR",ex:"¿Dónde <em>queda</em> eso?"},
-  {es:"dejar",en:"to leave (something) / let",pos:"verb",ph:"deh-HAR",ex:"<em>Deja</em> el bolso aquí"},
-  {es:"poner",en:"to put / place",pos:"verb",ph:"poh-NEHR",ex:"<em>Pon</em> la mesa, por favor"},
+  {es:"entender",en:"to understand",pos:"verb",ph:"en-ten-DEHR",ex:"No <em>entiendo</em>"},
+  {es:"extrañar",en:"to miss someone",pos:"verb",ph:"eks-trah-NYAR",ex:"Te <em>extraño</em> mucho"},
+  {es:"volver",en:"to return",pos:"verb",ph:"bol-BEHR",ex:"¿Cuándo <em>vuelves</em>?"},
+  {es:"quedar",en:"to be located / stay",pos:"verb",ph:"keh-DAR",ex:"¿Dónde <em>queda</em>?"},
+],
+
+"Numbers & Time":[
+  {es:"uno",en:"one",pos:"number",ph:"OO-noh",ex:"Tengo <em>un</em> hermano"},
+  {es:"dos",en:"two",pos:"number",ph:"dohs",ex:"<em>Dos</em> cafés"},
+  {es:"tres",en:"three",pos:"number",ph:"trehs",ex:"Son las <em>tres</em>"},
+  {es:"cuatro",en:"four",pos:"number",ph:"KWAH-troh",ex:"<em>Cuatro</em> personas"},
+  {es:"cinco",en:"five",pos:"number",ph:"SEEN-koh",ex:"<em>Cinco</em> minutos"},
+  {es:"diez",en:"ten",pos:"number",ph:"dyehs",ex:"<em>Diez</em> dólares"},
+  {es:"veinte",en:"twenty",pos:"number",ph:"BEYN-teh",ex:"<em>Veinte</em> años"},
+  {es:"cien",en:"one hundred",pos:"number",ph:"syen",ex:"<em>Cien</em> personas"},
+  {es:"hoy",en:"today",pos:"adverb",ph:"oy",ex:"<em>Hoy</em> es lunes"},
+  {es:"ayer",en:"yesterday",pos:"adverb",ph:"ah-YEHR",ex:"<em>Ayer</em> llovió"},
+  {es:"mañana",en:"tomorrow",pos:"adverb",ph:"mah-NYAH-nah",ex:"<em>Mañana</em> te llamo"},
+  {es:"ahora",en:"now",pos:"adverb",ph:"ah-OH-rah",ex:"<em>Ahora</em> mismo"},
+  {es:"después",en:"later",pos:"adverb",ph:"dehs-PWES",ex:"<em>Después</em> hablamos"},
+  {es:"ya",en:"already / now",pos:"adverb",ph:"yah",ex:"<em>Ya</em> terminé"},
+  {es:"todavía",en:"still / yet",pos:"adverb",ph:"toh-dah-BEE-ah",ex:"<em>Todavía</em> no llega"},
+  {es:"siempre",en:"always",pos:"adverb",ph:"SYEM-preh",ex:"<em>Siempre</em> llegas tarde"},
+  {es:"nunca",en:"never",pos:"adverb",ph:"NOON-kah",ex:"<em>Nunca</em> he estado allá"},
+  {es:"a veces",en:"sometimes",pos:"adverb",ph:"ah BEH-sehs",ex:"<em>A veces</em> me olvido"},
+  {es:"¿qué hora es?",en:"what time is it?",pos:"phrase",ph:"keh OH-rah ehs",ex:"<em>¿Qué hora es?</em>"},
+  {es:"el fin de semana",en:"the weekend",pos:"phrase",ph:"el feen deh seh-MAH-nah",ex:"Este <em>fin de semana</em>"},
+],
+
+"Food & Restaurant":[
+  {es:"el agua",en:"water",pos:"noun (f.)",ph:"AH-gwah",ex:"Más <em>agua</em>, por favor"},
+  {es:"el café",en:"coffee",pos:"noun (m.)",ph:"kah-FEH",ex:"Un <em>café</em> negro"},
+  {es:"el vino",en:"wine",pos:"noun (m.)",ph:"BEE-noh",ex:"Una copa de <em>vino</em>"},
+  {es:"la cerveza",en:"beer",pos:"noun (f.)",ph:"sehr-BEH-sah",ex:"Dos <em>cervezas</em> frías"},
+  {es:"el pollo",en:"chicken",pos:"noun (m.)",ph:"POH-yoh",ex:"<em>Pollo</em> guisado"},
+  {es:"la carne",en:"meat",pos:"noun (f.)",ph:"KAR-neh",ex:"<em>Carne</em> asada"},
+  {es:"el arroz",en:"rice",pos:"noun (m.)",ph:"ah-RROS",ex:"<em>Arroz</em> con caraotas"},
+  {es:"la arepa",en:"arepa",pos:"noun (f.)",ph:"ah-REH-pah",ex:"Una <em>arepa</em> con queso"},
+  {es:"el desayuno",en:"breakfast",pos:"noun (m.)",ph:"deh-sah-YOO-noh",ex:"¿Qué hay de <em>desayuno</em>?"},
+  {es:"el almuerzo",en:"lunch",pos:"noun (m.)",ph:"al-MWEHR-soh",ex:"El <em>almuerzo</em> está listo"},
+  {es:"la cena",en:"dinner",pos:"noun (f.)",ph:"SEH-nah",ex:"¿Dónde cenamos?"},
+  {es:"la cuenta",en:"the check/bill",pos:"noun (f.)",ph:"KWEN-tah",ex:"La <em>cuenta</em>, por favor"},
+  {es:"delicioso",en:"delicious",pos:"adjective",ph:"deh-lee-SYOH-soh",ex:"¡Está <em>delicioso</em>!"},
+  {es:"rico",en:"tasty / delicious",pos:"adjective",ph:"REE-koh",ex:"¡Qué <em>rico</em>!"},
+  {es:"picante",en:"spicy",pos:"adjective",ph:"pee-KAN-teh",ex:"¿Está muy <em>picante</em>?"},
+  {es:"sin...",en:"without...",pos:"preposition",ph:"seen",ex:"<em>Sin</em> cebolla"},
+  {es:"¿qué recomienda?",en:"what do you recommend?",pos:"phrase",ph:"keh reh-koh-MYEN-dah",ex:"<em>¿Qué recomienda?</em>"},
+  {es:"para llevar",en:"to go / takeout",pos:"phrase",ph:"PAH-rah yeh-BAR",ex:"¿Es <em>para llevar</em>?"},
+  {es:"¡buen provecho!",en:"enjoy your meal!",pos:"expression",ph:"bwen proh-BEH-choh",ex:"<em>¡Buen provecho!</em>"},
+  {es:"la propina",en:"tip",pos:"noun (f.)",ph:"proh-PEE-nah",ex:"¿Está incluida la <em>propina</em>?"},
 ],
 
 "Family & Relationships":[
-  {es:"la familia",en:"family",pos:"noun (f.)",ph:"lah fah-MEE-lyah",ex:"Mi <em>familia</em> es grande"},
-  {es:"la mamá / la madre",en:"mom / mother",pos:"noun (f.)",ph:"mah-MAH / MAH-dreh",ex:"Mi <em>mamá</em> cocina muy bien"},
-  {es:"el papá / el padre",en:"dad / father",pos:"noun (m.)",ph:"pah-PAH / PAH-dreh",ex:"Mi <em>papá</em> es muy trabajador"},
-  {es:"el hermano",en:"brother",pos:"noun (m.)",ph:"el ehr-MAH-noh",ex:"Tengo un <em>hermano</em> mayor"},
-  {es:"la hermana",en:"sister",pos:"noun (f.)",ph:"lah ehr-MAH-nah",ex:"Mi <em>hermana</em> vive en Caracas"},
-  {es:"el abuelo",en:"grandfather",pos:"noun (m.)",ph:"el ah-BWEH-loh",ex:"Mi <em>abuelo</em> tiene 80 años"},
-  {es:"la abuela",en:"grandmother",pos:"noun (f.)",ph:"lah ah-BWEH-lah",ex:"La <em>abuela</em> hace arepas ricas"},
-  {es:"el hijo",en:"son",pos:"noun (m.)",ph:"el EE-hoh",ex:"Mi <em>hijo</em> tiene cinco años"},
-  {es:"la hija",en:"daughter",pos:"noun (f.)",ph:"lah EE-hah",ex:"Mi <em>hija</em> estudia medicina"},
-  {es:"el esposo / el marido",en:"husband",pos:"noun (m.)",ph:"el ehs-POH-soh",ex:"Mi <em>esposo</em> es muy cariñoso"},
-  {es:"la esposa / la mujer",en:"wife",pos:"noun (f.)",ph:"lah ehs-POH-sah",ex:"Mi <em>esposa</em> es venezolana"},
-  {es:"el novio",en:"boyfriend / fiancé",pos:"noun (m.)",ph:"el NOH-byoh",ex:"Te presento a mi <em>novio</em>"},
-  {es:"la novia",en:"girlfriend / fiancée",pos:"noun (f.)",ph:"lah NOH-byah",ex:"Mi <em>novia</em> es de Venezuela"},
-  {es:"el tío",en:"uncle",pos:"noun (m.)",ph:"el TEE-oh",ex:"Mi <em>tío</em> vive en Bogotá"},
-  {es:"la tía",en:"aunt",pos:"noun (f.)",ph:"lah TEE-ah",ex:"La <em>tía</em> Carmen es la favorita"},
-  {es:"el primo / la prima",en:"cousin (m./f.)",pos:"noun",ph:"el PREE-moh",ex:"Mi <em>primo</em> y yo somos muy amigos"},
-  {es:"el sobrino / la sobrina",en:"nephew / niece",pos:"noun",ph:"el soh-BREE-noh",ex:"Mi <em>sobrina</em> estudia ballet"},
-  {es:"el bebé",en:"baby",pos:"noun (m.)",ph:"el beh-BEH",ex:"El <em>bebé</em> está durmiendo"},
-  {es:"el amigo / la amiga",en:"friend (m./f.)",pos:"noun",ph:"el ah-MEE-goh",ex:"Es mi mejor <em>amiga</em>"},
-  {es:"el vecino / la vecina",en:"neighbor (m./f.)",pos:"noun",ph:"el beh-SEE-noh",ex:"Mi <em>vecino</em> es muy amable"},
-  {es:"casado/a",en:"married",pos:"adjective",ph:"kah-SAH-doh",ex:"Estoy <em>casado</em> hace dos años"},
+  {es:"la mamá",en:"mom",pos:"noun (f.)",ph:"mah-MAH",ex:"Mi <em>mamá</em> cocina bien"},
+  {es:"el papá",en:"dad",pos:"noun (m.)",ph:"pah-PAH",ex:"Mi <em>papá</em> trabaja mucho"},
+  {es:"el hermano",en:"brother",pos:"noun (m.)",ph:"ehr-MAH-noh",ex:"Mi <em>hermano</em> mayor"},
+  {es:"la hermana",en:"sister",pos:"noun (f.)",ph:"ehr-MAH-nah",ex:"Mi <em>hermana</em>"},
+  {es:"el abuelo",en:"grandfather",pos:"noun (m.)",ph:"ah-BWEH-loh",ex:"Mi <em>abuelo</em>"},
+  {es:"la abuela",en:"grandmother",pos:"noun (f.)",ph:"ah-BWEH-lah",ex:"La <em>abuela</em> hace arepas"},
+  {es:"la novia",en:"girlfriend",pos:"noun (f.)",ph:"NOH-byah",ex:"Mi <em>novia</em> es venezolana"},
+  {es:"el novio",en:"boyfriend",pos:"noun (m.)",ph:"NOH-byoh",ex:"Mi <em>novio</em>"},
+  {es:"el amigo",en:"friend (male)",pos:"noun (m.)",ph:"ah-MEE-goh",ex:"Mi mejor <em>amigo</em>"},
+  {es:"la amiga",en:"friend (female)",pos:"noun (f.)",ph:"ah-MEE-gah",ex:"Mi mejor <em>amiga</em>"},
+  {es:"la familia",en:"family",pos:"noun (f.)",ph:"fah-MEE-lyah",ex:"Mi <em>familia</em> es grande"},
+  {es:"te quiero",en:"I love you (casual)",pos:"phrase",ph:"teh KYEH-roh",ex:"<em>Te quiero</em> mucho"},
+  {es:"te amo",en:"I love you (deep)",pos:"phrase",ph:"teh AH-moh",ex:"<em>Te amo</em>"},
+  {es:"te extraño",en:"I miss you",pos:"phrase",ph:"teh eks-TRAH-nyoh",ex:"<em>Te extraño</em> mucho"},
+  {es:"me haces falta",en:"I miss you (Venezuelan)",pos:"phrase",ph:"meh AH-sehs FAL-tah",ex:"<em>Me haces falta</em>"},
+  {es:"la suegra",en:"mother-in-law",pos:"noun (f.)",ph:"SWEH-grah",ex:"Mi <em>suegra</em>"},
+  {es:"el suegro",en:"father-in-law",pos:"noun (m.)",ph:"SWEH-groh",ex:"Mi <em>suegro</em>"},
+  {es:"casado/a",en:"married",pos:"adjective",ph:"kah-SAH-doh",ex:"Estoy <em>casado</em>"},
   {es:"soltero/a",en:"single",pos:"adjective",ph:"sol-TEH-roh",ex:"Soy <em>soltero</em>"},
-  {es:"el suegro / la suegra",en:"father-in-law / mother-in-law",pos:"noun",ph:"el SWEH-groh",ex:"Mi <em>suegra</em> es de Maracaibo"},
-  {es:"el cuñado / la cuñada",en:"brother / sister-in-law",pos:"noun",ph:"el koo-NYAH-doh",ex:"Mi <em>cuñada</em> es médica"},
-  {es:"los parientes",en:"relatives",pos:"noun (m. pl.)",ph:"lohs pah-RYEN-tehs",ex:"Toda la familia y los <em>parientes</em>"},
-],
-
-"Food & Drink":[
-  {es:"el agua",en:"water",pos:"noun (f.)",ph:"AH-gwah",ex:"¿Me traes más <em>agua</em>?"},
-  {es:"el café",en:"coffee",pos:"noun (m.)",ph:"kah-FEH",ex:"Un <em>café</em> negro, por favor"},
-  {es:"el jugo / el zumo",en:"juice",pos:"noun (m.)",ph:"HOO-goh",ex:"<em>Jugo</em> de naranja natural"},
-  {es:"la leche",en:"milk",pos:"noun (f.)",ph:"LEH-cheh",ex:"Un café con <em>leche</em>"},
-  {es:"el vino",en:"wine",pos:"noun (m.)",ph:"BEE-noh",ex:"Una copa de <em>vino</em> tinto"},
-  {es:"la cerveza",en:"beer",pos:"noun (f.)",ph:"sehr-BEH-sah",ex:"Dos <em>cervezas</em> bien frías"},
-  {es:"el pan",en:"bread",pos:"noun (m.)",ph:"pahn",ex:"¿Me traes más <em>pan</em>?"},
-  {es:"el arroz",en:"rice",pos:"noun (m.)",ph:"ah-RROS",ex:"<em>Arroz</em> con caraotas"},
-  {es:"los frijoles / las caraotas",en:"beans",pos:"noun",ph:"free-HOH-lehs",ex:"<em>Caraotas</em> negras con arroz"},
-  {es:"la carne",en:"meat",pos:"noun (f.)",ph:"KAR-neh",ex:"<em>Carne</em> asada venezolana"},
-  {es:"el pollo",en:"chicken",pos:"noun (m.)",ph:"POH-yoh",ex:"<em>Pollo</em> guisado con papas"},
-  {es:"el pescado",en:"fish",pos:"noun (m.)",ph:"pehs-KAH-doh",ex:"El <em>pescado</em> está fresquísimo"},
-  {es:"el huevo",en:"egg",pos:"noun (m.)",ph:"WEH-boh",ex:"Dos <em>huevos</em> revueltos"},
-  {es:"el queso",en:"cheese",pos:"noun (m.)",ph:"KEH-soh",ex:"La arepa con <em>queso</em>"},
-  {es:"la arepa",en:"arepa (cornmeal patty)",pos:"noun (f.)",ph:"ah-REH-pah",ex:"Una <em>arepa</em> con queso de mano"},
-  {es:"la empanada",en:"empanada",pos:"noun (f.)",ph:"em-pah-NAH-dah",ex:"Una <em>empanada</em> de carne"},
-  {es:"el desayuno",en:"breakfast",pos:"noun (m.)",ph:"deh-sah-YOO-noh",ex:"¿Qué quieres de <em>desayuno</em>?"},
-  {es:"el almuerzo",en:"lunch",pos:"noun (m.)",ph:"al-MWEHR-soh",ex:"El <em>almuerzo</em> está listo"},
-  {es:"la cena",en:"dinner",pos:"noun (f.)",ph:"SEH-nah",ex:"¿Dónde vamos a <em>cenar</em>?"},
-  {es:"el postre",en:"dessert",pos:"noun (m.)",ph:"POHS-treh",ex:"¿Qué tienen de <em>postre</em>?"},
-  {es:"el helado",en:"ice cream",pos:"noun (m.)",ph:"eh-LAH-doh",ex:"Un <em>helado</em> de vainilla"},
-  {es:"la fruta",en:"fruit",pos:"noun (f.)",ph:"FROO-tah",ex:"Come más <em>frutas</em>"},
-  {es:"las verduras",en:"vegetables",pos:"noun (f. pl.)",ph:"behr-DOO-rahs",ex:"Necesitamos más <em>verduras</em>"},
-  {es:"la sal",en:"salt",pos:"noun (f.)",ph:"sahl",ex:"¿Me pasas la <em>sal</em>?"},
-  {es:"el azúcar",en:"sugar",pos:"noun (m.)",ph:"ah-SOO-kar",ex:"Sin <em>azúcar</em>, por favor"},
-  {es:"picante",en:"spicy",pos:"adjective",ph:"pee-KAN-teh",ex:"¿Está muy <em>picante</em>?"},
-  {es:"delicioso/a",en:"delicious",pos:"adjective",ph:"deh-lee-SYOH-soh",ex:"¡Está <em>delicioso</em>!"},
-  {es:"rico/a",en:"delicious / tasty / rich",pos:"adjective",ph:"REE-koh",ex:"¡Qué <em>rico</em> está esto!"},
-  {es:"la cuenta",en:"the check / bill",pos:"noun (f.)",ph:"KWEN-tah",ex:"La <em>cuenta</em>, por favor"},
-  {es:"la propina",en:"tip / gratuity",pos:"noun (f.)",ph:"proh-PEE-nah",ex:"¿Está incluida la <em>propina</em>?"},
-  {es:"el menú / la carta",en:"menu",pos:"noun (m.)",ph:"el meh-NOO",ex:"¿Me traes la <em>carta</em>?"},
-  {es:"el mesero / la mesera",en:"waiter / waitress",pos:"noun",ph:"meh-SEH-roh",ex:"El <em>mesero</em> fue muy amable"},
-  {es:"la propina",en:"the tip",pos:"noun (f.)",ph:"proh-PEE-nah",ex:"Dejamos buena <em>propina</em>"},
-  {es:"para llevar",en:"to go / takeout",pos:"phrase",ph:"PAH-rah yeh-BAR",ex:"¿Es <em>para llevar</em> o aquí?"},
-  {es:"la merienda",en:"snack / afternoon snack",pos:"noun (f.)",ph:"meh-RYEN-dah",ex:"¿Tienes algo para <em>merendar</em>?"},
-],
-
-"Restaurant & Ordering":[
-  {es:"quiero pedir...",en:"I'd like to order...",pos:"phrase",ph:"KYEH-roh peh-DEER",ex:"<em>Quiero pedir</em> el pabellón"},
-  {es:"¿qué recomienda?",en:"what do you recommend?",pos:"phrase",ph:"keh reh-koh-MYEN-dah",ex:"<em>¿Qué recomienda</em> usted?"},
-  {es:"¿hay mesa disponible?",en:"is there a table available?",pos:"phrase",ph:"eye MEH-sah dees-poh-NEE-bleh",ex:"<em>¿Hay mesa disponible</em> para dos?"},
-  {es:"tengo reservación",en:"I have a reservation",pos:"phrase",ph:"TEN-goh reh-sehr-bah-SYON",ex:"<em>Tengo reservación</em> a las ocho"},
-  {es:"¿está incluido?",en:"is it included?",pos:"phrase",ph:"ehs-TAH een-kloo-EE-doh",ex:"¿El servicio <em>está incluido</em>?"},
-  {es:"sin...",en:"without...",pos:"preposition",ph:"seen",ex:"<em>Sin</em> cebolla, por favor"},
-  {es:"con...",en:"with...",pos:"preposition",ph:"kon",ex:"Lo quiero <em>con</em> todo"},
-  {es:"¡buen provecho!",en:"enjoy your meal!",pos:"expression",ph:"bwen proh-BEH-choh",ex:"<em>¡Buen provecho!</em>"},
-  {es:"está muy bueno",en:"it's very good",pos:"phrase",ph:"ehs-TAH mooy BWEH-noh",ex:"Todo <em>está muy bueno</em> aquí"},
-  {es:"¿me puede traer...?",en:"can you bring me...?",pos:"phrase",ph:"meh PWEH-deh trah-EHR",ex:"<em>¿Me puede traer</em> más agua?"},
-  {es:"para mí",en:"for me",pos:"phrase",ph:"PAH-rah mee",ex:"<em>Para mí</em> el bistec, por favor"},
-  {es:"vamos a compartir",en:"we're going to share",pos:"phrase",ph:"BAH-mohs ah kom-par-TEER",ex:"<em>Vamos a compartir</em> la entrada"},
-  {es:"¿está picante?",en:"is it spicy?",pos:"phrase",ph:"ehs-TAH pee-KAN-teh",ex:"<em>¿Está picante</em> el ají?"},
-  {es:"no como carne",en:"I don't eat meat",pos:"phrase",ph:"noh KOH-moh KAR-neh",ex:"<em>No como carne</em>, soy vegetariano"},
-  {es:"soy alérgico/a a...",en:"I'm allergic to...",pos:"phrase",ph:"soy ah-LEHR-hee-koh",ex:"<em>Soy alérgico</em> al mariscos"},
-],
-
-"Travel & Transport":[
-  {es:"el aeropuerto",en:"airport",pos:"noun (m.)",ph:"ah-eh-roh-PWEHR-toh",ex:"Llega al <em>aeropuerto</em> dos horas antes"},
-  {es:"el avión",en:"airplane",pos:"noun (m.)",ph:"ah-BYON",ex:"El <em>avión</em> sale a las nueve"},
-  {es:"el pasaporte",en:"passport",pos:"noun (m.)",ph:"pah-sah-POR-teh",ex:"No olvides tu <em>pasaporte</em>"},
-  {es:"la maleta",en:"suitcase",pos:"noun (f.)",ph:"mah-LEH-tah",ex:"Mi <em>maleta</em> pesa mucho"},
-  {es:"el vuelo",en:"flight",pos:"noun (m.)",ph:"BWEH-loh",ex:"Mi <em>vuelo</em> es a las seis"},
-  {es:"la aduana",en:"customs",pos:"noun (f.)",ph:"lah ah-DWAH-nah",ex:"Pasamos por la <em>aduana</em>"},
-  {es:"el hotel",en:"hotel",pos:"noun (m.)",ph:"oh-TEL",ex:"¿Dónde está el <em>hotel</em>?"},
-  {es:"la habitación",en:"room",pos:"noun (f.)",ph:"ah-bee-tah-SYON",ex:"La <em>habitación</em> está muy limpia"},
-  {es:"el taxi",en:"taxi",pos:"noun (m.)",ph:"TAK-see",ex:"Pedí un <em>taxi</em> por la app"},
-  {es:"el autobús / el bus",en:"bus",pos:"noun (m.)",ph:"ow-toh-BOOS",ex:"El <em>bus</em> llega en diez minutos"},
-  {es:"el metro",en:"subway / metro",pos:"noun (m.)",ph:"MEH-troh",ex:"Tomamos el <em>metro</em>"},
-  {es:"la carretera",en:"highway / road",pos:"noun (f.)",ph:"kah-reh-TEH-rah",ex:"La <em>carretera</em> estaba muy congestionada"},
-  {es:"el semáforo",en:"traffic light",pos:"noun (m.)",ph:"seh-MAH-foh-roh",ex:"Gira en el <em>semáforo</em>"},
-  {es:"la cuadra / la manzana",en:"city block",pos:"noun (f.)",ph:"KWAH-drah",ex:"A dos <em>cuadras</em> de aquí"},
-  {es:"a la derecha",en:"to the right",pos:"direction",ph:"ah lah deh-REH-chah",ex:"Dobla <em>a la derecha</em>"},
-  {es:"a la izquierda",en:"to the left",pos:"direction",ph:"ah lah ees-KYEHR-dah",ex:"Está <em>a la izquierda</em>"},
-  {es:"recto / derecho",en:"straight ahead",pos:"direction",ph:"REK-toh",ex:"Sigue <em>recto</em> dos cuadras"},
-  {es:"¿dónde queda?",en:"where is it located?",pos:"phrase",ph:"DON-deh KEH-dah",ex:"<em>¿Dónde queda</em> el banco?"},
-  {es:"¿cuánto cuesta el pasaje?",en:"how much is the fare/ticket?",pos:"phrase",ph:"KWAN-toh KWES-tah",ex:"<em>¿Cuánto cuesta el pasaje</em>?"},
-  {es:"perdido/a",en:"lost",pos:"adjective",ph:"pehr-DEE-doh",ex:"Estoy <em>perdido</em>, ¿me ayudas?"},
-  {es:"la parada",en:"stop (bus/metro)",pos:"noun (f.)",ph:"lah pah-RAH-dah",ex:"Me bajo en la próxima <em>parada</em>"},
-  {es:"la reserva",en:"reservation / booking",pos:"noun (f.)",ph:"lah reh-SEHR-bah",ex:"Hice la <em>reserva</em> en línea"},
-  {es:"el equipaje",en:"luggage / baggage",pos:"noun (m.)",ph:"el eh-kee-PAH-heh",ex:"¿Dónde recojo el <em>equipaje</em>?"},
-  {es:"la llegada",en:"arrival",pos:"noun (f.)",ph:"lah yeh-GAH-dah",ex:"La <em>llegada</em> es a las tres"},
-  {es:"la salida",en:"departure / exit",pos:"noun (f.)",ph:"lah sah-LEE-dah",ex:"La <em>salida</em> es por aquí"},
-],
-
-"Home & Objects":[
-  {es:"la casa",en:"house / home",pos:"noun (f.)",ph:"lah KAH-sah",ex:"Bienvenido a mi <em>casa</em>"},
-  {es:"el apartamento",en:"apartment",pos:"noun (m.)",ph:"el ah-par-tah-MEN-toh",ex:"Vivo en un <em>apartamento</em>"},
-  {es:"la cocina",en:"kitchen",pos:"noun (f.)",ph:"lah koh-SEE-nah",ex:"Ella está en la <em>cocina</em>"},
-  {es:"el baño",en:"bathroom",pos:"noun (m.)",ph:"el BAH-nyoh",ex:"El <em>baño</em> está al fondo"},
-  {es:"la sala",en:"living room",pos:"noun (f.)",ph:"lah SAH-lah",ex:"Estamos en la <em>sala</em>"},
-  {es:"la habitación / el cuarto",en:"bedroom / room",pos:"noun",ph:"lah ah-bee-tah-SYON",ex:"Mi <em>cuarto</em> está desordenado"},
-  {es:"la cama",en:"bed",pos:"noun (f.)",ph:"lah KAH-mah",ex:"La <em>cama</em> es muy cómoda"},
-  {es:"la mesa",en:"table",pos:"noun (f.)",ph:"lah MEH-sah",ex:"La comida está en la <em>mesa</em>"},
-  {es:"la silla",en:"chair",pos:"noun (f.)",ph:"lah SEE-yah",ex:"Siéntate en esa <em>silla</em>"},
-  {es:"el sofá",en:"sofa / couch",pos:"noun (m.)",ph:"el soh-FAH",ex:"Vamos a ver tele en el <em>sofá</em>"},
-  {es:"la televisión / el televisor",en:"television / TV",pos:"noun (f.)",ph:"teh-leh-bee-SYON",ex:"¿Qué ponen en la <em>televisión</em>?"},
-  {es:"la puerta",en:"door",pos:"noun (f.)",ph:"lah PWEHR-tah",ex:"Cierra la <em>puerta</em>"},
-  {es:"la ventana",en:"window",pos:"noun (f.)",ph:"lah ben-TAH-nah",ex:"Abre la <em>ventana</em>, hace calor"},
-  {es:"la llave",en:"key",pos:"noun (f.)",ph:"lah YAH-beh",ex:"¿Tienes la <em>llave</em>?"},
-  {es:"el piso / el suelo",en:"floor",pos:"noun (m.)",ph:"el PEE-soh",ex:"El <em>piso</em> está limpio"},
-  {es:"la nevera / el refrigerador",en:"refrigerator",pos:"noun (f.)",ph:"lah neh-BEH-rah",ex:"Hay comida en la <em>nevera</em>"},
-  {es:"la ropa",en:"clothes / clothing",pos:"noun (f.)",ph:"lah ROH-pah",ex:"Tengo que lavar la <em>ropa</em>"},
-  {es:"la toalla",en:"towel",pos:"noun (f.)",ph:"lah toh-AH-yah",ex:"¿Dónde están las <em>toallas</em>?"},
-  {es:"el jabón",en:"soap",pos:"noun (m.)",ph:"el hah-BON",ex:"Necesito <em>jabón</em>"},
-  {es:"la almohada",en:"pillow",pos:"noun (f.)",ph:"lah al-moh-AH-dah",ex:"Esta <em>almohada</em> es muy suave"},
-],
-
-"Body & Health":[
-  {es:"la cabeza",en:"head",pos:"noun (f.)",ph:"kah-BEH-sah",ex:"Me duele la <em>cabeza</em>"},
-  {es:"el ojo",en:"eye",pos:"noun (m.)",ph:"OH-hoh",ex:"Tiene los <em>ojos</em> verdes"},
-  {es:"la nariz",en:"nose",pos:"noun (f.)",ph:"nah-REES",ex:"Me sangra la <em>nariz</em>"},
-  {es:"la boca",en:"mouth",pos:"noun (f.)",ph:"BOH-kah",ex:"Abre la <em>boca</em>"},
-  {es:"los dientes",en:"teeth",pos:"noun (m. pl.)",ph:"lohs DYEN-tehs",ex:"Me duelen los <em>dientes</em>"},
-  {es:"el cuello",en:"neck",pos:"noun (m.)",ph:"KWEH-yoh",ex:"Tengo dolor de <em>cuello</em>"},
-  {es:"el hombro",en:"shoulder",pos:"noun (m.)",ph:"OM-broh",ex:"Me lesioné el <em>hombro</em>"},
-  {es:"el brazo",en:"arm",pos:"noun (m.)",ph:"BRAH-soh",ex:"Se rompió el <em>brazo</em>"},
-  {es:"la mano",en:"hand",pos:"noun (f.)",ph:"MAH-noh",ex:"Dame la <em>mano</em>"},
-  {es:"el dedo",en:"finger",pos:"noun (m.)",ph:"DEH-doh",ex:"Me corté el <em>dedo</em>"},
-  {es:"el estómago",en:"stomach",pos:"noun (m.)",ph:"ehs-TOH-mah-goh",ex:"Me duele el <em>estómago</em>"},
-  {es:"la espalda",en:"back",pos:"noun (f.)",ph:"ehs-PAL-dah",ex:"Tengo dolor de <em>espalda</em>"},
-  {es:"la pierna",en:"leg",pos:"noun (f.)",ph:"PYEHR-nah",ex:"Me duele la <em>pierna</em>"},
-  {es:"la rodilla",en:"knee",pos:"noun (f.)",ph:"roh-DEE-yah",ex:"Tengo dolor de <em>rodilla</em>"},
-  {es:"el pie",en:"foot",pos:"noun (m.)",ph:"pyeh",ex:"Me duele el <em>pie</em>"},
-  {es:"el corazón",en:"heart",pos:"noun (m.)",ph:"koh-rah-SOHN",ex:"El <em>corazón</em> me late rápido"},
-  {es:"me duele...",en:"...hurts / my ... hurts",pos:"phrase",ph:"meh DWEH-leh",ex:"<em>Me duele</em> mucho la cabeza"},
-  {es:"tengo fiebre",en:"I have a fever",pos:"phrase",ph:"TEN-goh FYEH-breh",ex:"El niño <em>tiene fiebre</em>"},
-  {es:"estoy mareado/a",en:"I'm dizzy / nauseous",pos:"phrase",ph:"ehs-TOY mah-reh-AH-doh",ex:"<em>Estoy mareado</em>, necesito sentarme"},
-  {es:"el médico / el doctor",en:"doctor",pos:"noun (m.)",ph:"MEH-dee-koh",ex:"Necesito ver al <em>médico</em>"},
-  {es:"la farmacia",en:"pharmacy",pos:"noun (f.)",ph:"far-MAH-syah",ex:"¿Dónde hay una <em>farmacia</em>?"},
-  {es:"la medicina / el medicamento",en:"medicine",pos:"noun (f.)",ph:"meh-dee-SEE-nah",ex:"Toma la <em>medicina</em> con agua"},
-  {es:"soy alérgico/a a",en:"I'm allergic to",pos:"phrase",ph:"soy ah-LEHR-hee-koh",ex:"<em>Soy alérgico</em> a la penicilina"},
-  {es:"el hospital",en:"hospital",pos:"noun (m.)",ph:"ohs-pee-TAL",ex:"Llévame al <em>hospital</em>"},
-  {es:"cansado/a",en:"tired",pos:"adjective",ph:"kan-SAH-doh",ex:"Estoy muy <em>cansado</em> hoy"},
-],
-
-"Emotions & States":[
-  {es:"feliz / contento/a",en:"happy",pos:"adjective",ph:"feh-LEES",ex:"Estoy muy <em>feliz</em> contigo"},
-  {es:"triste",en:"sad",pos:"adjective",ph:"TREES-teh",ex:"¿Por qué estás <em>triste</em>?"},
-  {es:"enojado/a / bravo/a",en:"angry",pos:"adjective",ph:"eh-noh-HAH-doh",ex:"Está muy <em>bravo</em> conmigo"},
-  {es:"emocionado/a",en:"excited",pos:"adjective",ph:"eh-moh-syoh-NAH-doh",ex:"Estoy muy <em>emocionado</em>"},
-  {es:"nervioso/a",en:"nervous",pos:"adjective",ph:"nehr-BYOH-soh",ex:"Estoy un poco <em>nervioso</em>"},
-  {es:"asustado/a",en:"scared / frightened",pos:"adjective",ph:"ah-soos-TAH-doh",ex:"Estaba <em>asustado</em>"},
-  {es:"sorprendido/a",en:"surprised",pos:"adjective",ph:"sor-pren-DEE-doh",ex:"Estoy muy <em>sorprendido</em>"},
-  {es:"aburrido/a",en:"bored / boring",pos:"adjective",ph:"ah-boo-RREE-doh",ex:"Estoy <em>aburrido</em>"},
-  {es:"preocupado/a",en:"worried",pos:"adjective",ph:"preh-oh-koo-PAH-doh",ex:"Estoy <em>preocupado</em> por ti"},
-  {es:"tranquilo/a",en:"calm / relaxed",pos:"adjective",ph:"tran-KEE-loh",ex:"Quédate <em>tranquilo</em>"},
-  {es:"enamorado/a",en:"in love",pos:"adjective",ph:"eh-nah-moh-RAH-doh",ex:"Estoy muy <em>enamorado</em>"},
-  {es:"orgulloso/a",en:"proud",pos:"adjective",ph:"or-goo-YOH-soh",ex:"Estoy muy <em>orgulloso</em> de ti"},
-  {es:"avergonzado/a",en:"embarrassed / ashamed",pos:"adjective",ph:"ah-behr-gon-SAH-doh",ex:"Estaba muy <em>avergonzada</em>"},
-  {es:"celoso/a",en:"jealous",pos:"adjective",ph:"seh-LOH-soh",ex:"No seas <em>celoso</em>"},
-  {es:"extrañar",en:"to miss someone",pos:"verb",ph:"eks-trah-NYAR",ex:"Te <em>extraño</em> mucho"},
-  {es:"te quiero",en:"I love you (casual) / I care for you",pos:"phrase",ph:"teh KYEH-roh",ex:"<em>Te quiero</em> mucho, mi amor"},
-  {es:"te amo",en:"I love you (deep/romantic)",pos:"phrase",ph:"teh AH-moh",ex:"<em>Te amo</em> con todo mi corazón"},
-  {es:"me haces falta",en:"I miss you (lit: you are missing from me)",pos:"phrase",ph:"meh AH-sehs FAL-tah",ex:"<em>Me haces falta</em> cuando no estás"},
-  {es:"me alegra verte",en:"I'm happy to see you",pos:"phrase",ph:"meh ah-LEH-grah BEHR-teh",ex:"<em>Me alegra verte</em>, ¡tanto tiempo!"},
-  {es:"estoy harto/a",en:"I'm fed up / sick of",pos:"phrase",ph:"ehs-TOY AR-toh",ex:"<em>Estoy harto</em> de esperar"},
+  {es:"mi amor",en:"my love",pos:"expression",ph:"mee ah-MOR",ex:"Buenos días, <em>mi amor</em>"},
 ],
 
 "Adjectives":[
-  {es:"grande",en:"big / large / great",pos:"adj",ph:"GRAN-deh",ex:"Es una ciudad muy <em>grande</em>"},
-  {es:"pequeño/a",en:"small / little",pos:"adj",ph:"peh-KEH-nyoh",ex:"Un apartamento <em>pequeño</em>"},
-  {es:"bueno/a",en:"good",pos:"adj",ph:"BWEH-noh",ex:"Es una <em>buena</em> persona"},
-  {es:"malo/a",en:"bad",pos:"adj",ph:"MAH-loh",ex:"Tuve un día muy <em>malo</em>"},
-  {es:"bonito/a / lindo/a",en:"pretty / nice",pos:"adj",ph:"boh-NEE-toh",ex:"¡Qué <em>bonita</em> eres!"},
-  {es:"feo/a",en:"ugly",pos:"adj",ph:"FEH-oh",ex:"Ese edificio es muy <em>feo</em>"},
-  {es:"nuevo/a",en:"new",pos:"adj",ph:"NWEH-boh",ex:"Tengo un carro <em>nuevo</em>"},
-  {es:"viejo/a",en:"old",pos:"adj",ph:"BYEH-hoh",ex:"Esta casa es muy <em>vieja</em>"},
-  {es:"rápido/a",en:"fast / quick",pos:"adj",ph:"RAH-pee-doh",ex:"Un carro muy <em>rápido</em>"},
-  {es:"lento/a",en:"slow",pos:"adj",ph:"LEN-toh",ex:"El servicio fue muy <em>lento</em>"},
+  {es:"grande",en:"big / great",pos:"adj",ph:"GRAN-deh",ex:"Una ciudad muy <em>grande</em>"},
+  {es:"pequeño/a",en:"small",pos:"adj",ph:"peh-KEH-nyoh",ex:"Un apartamento <em>pequeño</em>"},
+  {es:"bueno/a",en:"good",pos:"adj",ph:"BWEH-noh",ex:"Es muy <em>bueno</em>"},
+  {es:"malo/a",en:"bad",pos:"adj",ph:"MAH-loh",ex:"Un día muy <em>malo</em>"},
+  {es:"bonito/a",en:"pretty / nice",pos:"adj",ph:"boh-NEE-toh",ex:"¡Qué <em>bonita</em>!"},
+  {es:"nuevo/a",en:"new",pos:"adj",ph:"NWEH-boh",ex:"Un teléfono <em>nuevo</em>"},
+  {es:"viejo/a",en:"old",pos:"adj",ph:"BYEH-hoh",ex:"Una casa muy <em>vieja</em>"},
   {es:"caliente",en:"hot",pos:"adj",ph:"kah-LYEN-teh",ex:"El café está <em>caliente</em>"},
-  {es:"frío/a",en:"cold",pos:"adj",ph:"FREE-oh",ex:"El agua está muy <em>fría</em>"},
+  {es:"frío/a",en:"cold",pos:"adj",ph:"FREE-oh",ex:"El agua está <em>fría</em>"},
   {es:"caro/a",en:"expensive",pos:"adj",ph:"KAH-roh",ex:"Está muy <em>caro</em>"},
-  {es:"barato/a",en:"cheap / affordable",pos:"adj",ph:"bah-RAH-toh",ex:"Es muy <em>barato</em>"},
-  {es:"fácil",en:"easy",pos:"adj",ph:"FAH-seel",ex:"El examen fue <em>fácil</em>"},
-  {es:"difícil",en:"difficult",pos:"adj",ph:"dee-FEE-seel",ex:"El español no es tan <em>difícil</em>"},
-  {es:"limpio/a",en:"clean",pos:"adj",ph:"LEEM-pyoh",ex:"El cuarto está muy <em>limpio</em>"},
-  {es:"sucio/a",en:"dirty",pos:"adj",ph:"SOO-syoh",ex:"La cocina está <em>sucia</em>"},
-  {es:"lleno/a",en:"full",pos:"adj",ph:"YEH-noh",ex:"Estoy <em>lleno</em>, gracias"},
-  {es:"vacío/a",en:"empty",pos:"adj",ph:"bah-SEE-oh",ex:"El vaso está <em>vacío</em>"},
-  {es:"fuerte",en:"strong",pos:"adj",ph:"FWEHR-teh",ex:"Es una persona muy <em>fuerte</em>"},
-  {es:"débil",en:"weak",pos:"adj",ph:"DEH-beel",ex:"Me siento un poco <em>débil</em>"},
-  {es:"alto/a",en:"tall / high",pos:"adj",ph:"AL-toh",ex:"Es muy <em>alta</em> para su edad"},
-  {es:"bajo/a",en:"short / low",pos:"adj",ph:"BAH-hoh",ex:"Es un poco <em>bajo</em>"},
-  {es:"gordo/a",en:"fat / chubby",pos:"adj",ph:"GOR-doh",ex:"Engordó un poco"},
-  {es:"delgado/a / flaco/a",en:"thin / slim",pos:"adj",ph:"del-GAH-doh",ex:"Está muy <em>flaca</em>"},
-  {es:"hermoso/a / bello/a",en:"beautiful / gorgeous",pos:"adj",ph:"ehr-MOH-soh",ex:"¡Qué <em>hermosa</em> vista!"},
-  {es:"simpático/a",en:"nice / friendly",pos:"adj",ph:"seem-PAH-tee-koh",ex:"Es muy <em>simpática</em>"},
-  {es:"antipático/a",en:"unfriendly / unpleasant",pos:"adj",ph:"an-tee-PAH-tee-koh",ex:"Ese señor es muy <em>antipático</em>"},
-  {es:"inteligente",en:"intelligent / smart",pos:"adj",ph:"een-teh-lee-HEN-teh",ex:"Es muy <em>inteligente</em>"},
-  {es:"aburrido/a",en:"boring / bored",pos:"adj",ph:"ah-boo-RREE-doh",ex:"La clase estuvo muy <em>aburrida</em>"},
-  {es:"interesante",en:"interesting",pos:"adj",ph:"een-teh-reh-SAN-teh",ex:"¡Qué historia tan <em>interesante</em>!"},
-  {es:"importante",en:"important",pos:"adj",ph:"eem-por-TAN-teh",ex:"Es muy <em>importante</em>"},
+  {es:"barato/a",en:"cheap",pos:"adj",ph:"bah-RAH-toh",ex:"Es muy <em>barato</em>"},
+  {es:"fácil",en:"easy",pos:"adj",ph:"FAH-seel",ex:"Es <em>fácil</em>"},
+  {es:"difícil",en:"difficult",pos:"adj",ph:"dee-FEE-seel",ex:"No es tan <em>difícil</em>"},
+  {es:"feliz",en:"happy",pos:"adj",ph:"feh-LEES",ex:"Estoy muy <em>feliz</em>"},
+  {es:"triste",en:"sad",pos:"adj",ph:"TREES-teh",ex:"Estoy <em>triste</em>"},
+  {es:"cansado/a",en:"tired",pos:"adj",ph:"kan-SAH-doh",ex:"Estoy muy <em>cansado</em>"},
+  {es:"emocionado/a",en:"excited",pos:"adj",ph:"eh-moh-syoh-NAH-doh",ex:"Estoy muy <em>emocionado</em>"},
+  {es:"nervioso/a",en:"nervous",pos:"adj",ph:"nehr-BYOH-soh",ex:"Estoy <em>nervioso</em>"},
+  {es:"hermoso/a",en:"beautiful",pos:"adj",ph:"ehr-MOH-soh",ex:"¡Qué <em>hermosa</em>!"},
   {es:"increíble",en:"incredible",pos:"adj",ph:"een-kreh-EE-bleh",ex:"¡Fue <em>increíble</em>!"},
-  {es:"diferente",en:"different",pos:"adj",ph:"dee-feh-REN-teh",ex:"Son muy <em>diferentes</em>"},
 ],
 
-"Colors":[
+"Venezuelan Expressions":[
+  {es:"¿y eso?",en:"what's that about?",pos:"expression",ph:"ee EH-soh",ex:"Me llamaste tarde — <em>¿y eso?</em>"},
+  {es:"chévere",en:"cool / awesome",pos:"adjective",ph:"CHEH-beh-reh",ex:"¡Qué <em>chévere</em>!"},
+  {es:"pana",en:"buddy / friend",pos:"noun",ph:"PAH-nah",ex:"Ese es mi <em>pana</em>"},
+  {es:"arrecho/a",en:"intense / impressive",pos:"adjective",ph:"ah-RREH-choh",ex:"Estuvo <em>arrecho</em>"},
+  {es:"espérate",en:"hold on / wait",pos:"expression",ph:"ehs-PEH-rah-teh",ex:"<em>Espérate</em> que te cuento"},
+  {es:"epa",en:"hey / wow",pos:"expression",ph:"EH-pah",ex:"<em>¡Epa!</em> ¿Cómo estás?"},
+  {es:"que vaina",en:"what a thing / ugh",pos:"expression",ph:"keh BAY-nah",ex:"<em>Que vaina</em>..."},
+  {es:"no joda",en:"no way / seriously?",pos:"expression",ph:"noh HOH-dah",ex:"<em>No joda</em>, ¿en serio?"},
+  {es:"pues",en:"well / so",pos:"filler",ph:"pwehs",ex:"<em>Pues</em>, no sé"},
+  {es:"¿qué más?",en:"what's up? / how's it going?",pos:"greeting",ph:"keh mahs",ex:"<em>¿Qué más?</em>"},
+  {es:"rumbear",en:"to party / go out",pos:"verb",ph:"room-beh-AR",ex:"Vamos a <em>rumbear</em>"},
+  {es:"mi vida",en:"sweetheart / my life",pos:"expression",ph:"mee BEE-dah",ex:"Buenos días, <em>mi vida</em>"},
+  {es:"las caraotas",en:"black beans (Venezuelan)",pos:"noun (f. pl.)",ph:"kah-rah-OH-tahs",ex:"<em>Caraotas</em> negras"},
+  {es:"la arepa",en:"Venezuelan cornmeal patty",pos:"noun (f.)",ph:"ah-REH-pah",ex:"Una <em>arepa</em> con queso"},
+  {es:"el pabellón",en:"Venezuelan national dish",pos:"noun (m.)",ph:"pah-beh-YON",ex:"Un <em>pabellón</em> criollo"},
+  {es:"coño",en:"wow / damn (strong)",pos:"expression",ph:"KOH-nyoh",ex:"<em>¡Coño!</em> ¿Qué pasó?"},
+  {es:"bacano",en:"cool / great",pos:"adjective",ph:"bah-KAH-noh",ex:"Está <em>bacano</em>"},
+  {es:"estoy pegado",en:"I'm broke",pos:"phrase",ph:"ehs-TOY peh-GAH-doh",ex:"<em>Estoy pegado</em>"},
+  {es:"el tostón",en:"fried plantain",pos:"noun (m.)",ph:"tohs-TON",ex:"Unos <em>tostones</em>"},
+  {es:"¡ánimo!",en:"you can do it! / cheer up!",pos:"expression",ph:"AH-nee-moh",ex:"<em>¡Ánimo!</em>"},
+],
+
+"Colors & Descriptions":[
   {es:"rojo/a",en:"red",pos:"adj",ph:"ROH-hoh",ex:"La rosa es <em>roja</em>"},
-  {es:"azul",en:"blue",pos:"adj",ph:"ah-SOOL",ex:"El cielo está <em>azul</em>"},
+  {es:"azul",en:"blue",pos:"adj",ph:"ah-SOOL",ex:"El cielo es <em>azul</em>"},
   {es:"verde",en:"green",pos:"adj",ph:"BEHR-deh",ex:"El pasto es <em>verde</em>"},
   {es:"amarillo/a",en:"yellow",pos:"adj",ph:"ah-mah-REE-yoh",ex:"El sol es <em>amarillo</em>"},
   {es:"negro/a",en:"black",pos:"adj",ph:"NEH-groh",ex:"Un café <em>negro</em>"},
   {es:"blanco/a",en:"white",pos:"adj",ph:"BLAHN-koh",ex:"La nieve es <em>blanca</em>"},
-  {es:"gris",en:"gray",pos:"adj",ph:"grees",ex:"El cielo está <em>gris</em>"},
-  {es:"marrón / café",en:"brown",pos:"adj",ph:"mah-RRON",ex:"El oso es <em>marrón</em>"},
-  {es:"naranja",en:"orange",pos:"adj",ph:"nah-RAN-hah",ex:"Color <em>naranja</em>"},
   {es:"morado/a",en:"purple",pos:"adj",ph:"moh-RAH-doh",ex:"Me gusta el <em>morado</em>"},
-  {es:"rosado/a",en:"pink",pos:"adj",ph:"roh-SAH-doh",ex:"El flamenco es <em>rosado</em>"},
-  {es:"dorado/a",en:"golden",pos:"adj",ph:"doh-RAH-doh",ex:"Un anillo <em>dorado</em>"},
-  {es:"plateado/a",en:"silver",pos:"adj",ph:"plah-teh-AH-doh",ex:"Un collar <em>plateado</em>"},
-  {es:"claro/a",en:"light (shade)",pos:"adj",ph:"KLAH-roh",ex:"Azul <em>claro</em>"},
-  {es:"oscuro/a",en:"dark (shade)",pos:"adj",ph:"ohs-KOO-roh",ex:"Verde <em>oscuro</em>"},
-],
-
-"Work & School":[
-  {es:"el trabajo",en:"work / job",pos:"noun (m.)",ph:"trah-BAH-hoh",ex:"¿Cómo fue el <em>trabajo</em>?"},
-  {es:"la oficina",en:"office",pos:"noun (f.)",ph:"oh-fee-SEE-nah",ex:"Trabajo en una <em>oficina</em>"},
-  {es:"el jefe / la jefa",en:"boss",pos:"noun",ph:"HEH-feh",ex:"Mi <em>jefa</em> es exigente"},
-  {es:"el compañero de trabajo",en:"coworker",pos:"noun (m.)",ph:"kom-pah-NYEH-roh",ex:"Mi <em>compañero</em> es muy amable"},
-  {es:"el sueldo / el salario",en:"salary / wage",pos:"noun (m.)",ph:"SWEL-doh",ex:"El <em>sueldo</em> no es suficiente"},
-  {es:"la reunión",en:"meeting",pos:"noun (f.)",ph:"reh-oo-NYON",ex:"Tengo una <em>reunión</em> a las tres"},
-  {es:"el proyecto",en:"project",pos:"noun (m.)",ph:"proh-YEK-toh",ex:"Estoy en un <em>proyecto</em> grande"},
-  {es:"la escuela",en:"school",pos:"noun (f.)",ph:"ehs-KWEH-lah",ex:"Mis hijos van a la <em>escuela</em>"},
-  {es:"la universidad",en:"university",pos:"noun (f.)",ph:"oo-nee-behr-see-DAHD",ex:"Estudio en la <em>universidad</em>"},
-  {es:"el estudiante",en:"student",pos:"noun (m.)",ph:"ehs-too-DYAN-teh",ex:"Soy <em>estudiante</em> de español"},
-  {es:"el profesor / la profesora",en:"teacher / professor",pos:"noun",ph:"proh-feh-SOR",ex:"El <em>profesor</em> explica bien"},
-  {es:"el examen",en:"exam / test",pos:"noun (m.)",ph:"ek-SAH-men",ex:"Tengo un <em>examen</em> mañana"},
-  {es:"la tarea",en:"homework",pos:"noun (f.)",ph:"tah-REH-ah",ex:"Olvidé hacer la <em>tarea</em>"},
-  {es:"aprender",en:"to learn",pos:"verb",ph:"ah-pren-DEHR",ex:"Quiero <em>aprender</em> español"},
-  {es:"estudiar",en:"to study",pos:"verb",ph:"ehs-too-DYAR",ex:"Necesito <em>estudiar</em> más"},
-  {es:"el médico",en:"doctor",pos:"noun (m.)",ph:"MEH-dee-koh",ex:"Trabajo como <em>médico</em>"},
-  {es:"el abogado",en:"lawyer",pos:"noun (m.)",ph:"ah-boh-GAH-doh",ex:"Mi tío es <em>abogado</em>"},
-  {es:"el ingeniero",en:"engineer",pos:"noun (m.)",ph:"een-heh-NYEH-roh",ex:"Soy <em>ingeniero</em> de sistemas"},
-  {es:"el chef / el cocinero",en:"chef / cook",pos:"noun (m.)",ph:"chef / koh-see-NEH-roh",ex:"El <em>chef</em> es venezolano"},
-  {es:"desempleo",en:"unemployment",pos:"noun (m.)",ph:"dehs-em-PLEH-oh",ex:"El <em>desempleo</em> es alto"},
-],
-
-"Weather & Nature":[
-  {es:"el tiempo",en:"weather / time",pos:"noun (m.)",ph:"TYEM-poh",ex:"¿Cómo está el <em>tiempo</em>?"},
-  {es:"hace calor",en:"it's hot",pos:"phrase",ph:"AH-seh kah-LOR",ex:"<em>Hace mucho calor</em> hoy"},
-  {es:"hace frío",en:"it's cold",pos:"phrase",ph:"AH-seh FREE-oh",ex:"<em>Hace frío</em> esta mañana"},
-  {es:"hace sol",en:"it's sunny",pos:"phrase",ph:"AH-seh sol",ex:"<em>Hace sol</em>, vamos a la playa"},
-  {es:"está nublado",en:"it's cloudy",pos:"phrase",ph:"ehs-TAH noo-BLAH-doh",ex:"Hoy <em>está nublado</em>"},
-  {es:"llueve / está lloviendo",en:"it's raining",pos:"phrase",ph:"YWE-beh",ex:"<em>Está lloviendo</em> mucho"},
-  {es:"el aguacero",en:"heavy rain / downpour",pos:"noun (m.)",ph:"ah-gwah-SEH-roh",ex:"Cayó un <em>aguacero</em> horrible"},
-  {es:"el viento",en:"wind",pos:"noun (m.)",ph:"BYEN-toh",ex:"El <em>viento</em> está fuerte"},
-  {es:"la tormenta",en:"storm",pos:"noun (f.)",ph:"tor-MEN-tah",ex:"Se viene una <em>tormenta</em>"},
-  {es:"el sol",en:"sun",pos:"noun (m.)",ph:"sol",ex:"El <em>sol</em> pega fuerte aquí"},
-  {es:"la luna",en:"moon",pos:"noun (f.)",ph:"LOO-nah",ex:"La <em>luna</em> está llena hoy"},
-  {es:"el mar / el océano",en:"sea / ocean",pos:"noun (m.)",ph:"mar / oh-SEH-ah-noh",ex:"Vivo cerca del <em>mar</em>"},
-  {es:"la playa",en:"beach",pos:"noun (f.)",ph:"PLAH-yah",ex:"Vamos a la <em>playa</em>"},
-  {es:"la montaña",en:"mountain",pos:"noun (f.)",ph:"mon-TAH-nyah",ex:"Las <em>montañas</em> de Venezuela"},
-  {es:"el río",en:"river",pos:"noun (m.)",ph:"RREE-oh",ex:"Nadamos en el <em>río</em>"},
-  {es:"el árbol",en:"tree",pos:"noun (m.)",ph:"AR-bol",ex:"El <em>árbol</em> da sombra"},
-  {es:"la flor",en:"flower",pos:"noun (f.)",ph:"flor",ex:"Te traje unas <em>flores</em>"},
-  {es:"la temperatura",en:"temperature",pos:"noun (f.)",ph:"tem-peh-rah-TOO-rah",ex:"La <em>temperatura</em> sube en verano"},
-  {es:"el huracán",en:"hurricane",pos:"noun (m.)",ph:"oo-rah-KAN",ex:"El <em>huracán</em> llegó a la costa"},
-  {es:"húmedo/a",en:"humid",pos:"adjective",ph:"OO-meh-doh",ex:"Caracas es muy <em>húmeda</em>"},
-],
-
-"Technology":[
-  {es:"el teléfono / el celular",en:"phone / cell phone",pos:"noun (m.)",ph:"teh-LEH-foh-noh",ex:"¿Cuál es tu número de <em>celular</em>?"},
-  {es:"la computadora / el computador",en:"computer",pos:"noun (f.)",ph:"kom-poo-tah-DOH-rah",ex:"Mi <em>computadora</em> está lenta"},
-  {es:"el internet / la wifi",en:"internet / wifi",pos:"noun",ph:"een-tehr-NET",ex:"¿Cuál es la clave del <em>wifi</em>?"},
-  {es:"la contraseña",en:"password",pos:"noun (f.)",ph:"kon-trah-SEH-nyah",ex:"Olvidé mi <em>contraseña</em>"},
-  {es:"el correo electrónico",en:"email",pos:"noun (m.)",ph:"koh-RREH-oh eh-lek-TROH-nee-koh",ex:"Te mando el correo por <em>email</em>"},
-  {es:"la aplicación / la app",en:"app",pos:"noun (f.)",ph:"ah-plee-kah-SYON",ex:"Descarga la <em>aplicación</em>"},
-  {es:"el mensaje",en:"message / text",pos:"noun (m.)",ph:"men-SAH-heh",ex:"Te mandé un <em>mensaje</em>"},
-  {es:"cargar",en:"to charge (battery)",pos:"verb",ph:"kar-GAR",ex:"Necesito <em>cargar</em> el celular"},
-  {es:"la batería",en:"battery",pos:"noun (f.)",ph:"bah-teh-REE-ah",ex:"La <em>batería</em> está en cero"},
-  {es:"la pantalla",en:"screen",pos:"noun (f.)",ph:"pan-TAH-yah",ex:"Se rompió la <em>pantalla</em>"},
-  {es:"el cargador",en:"charger",pos:"noun (m.)",ph:"kar-gah-DOR",ex:"¿Tienes el <em>cargador</em>?"},
-  {es:"mandar / enviar",en:"to send",pos:"verb",ph:"man-DAR",ex:"Voy a <em>mandar</em> el archivo"},
-  {es:"llamada",en:"call",pos:"noun (f.)",ph:"yah-MAH-dah",ex:"Me perdí una <em>llamada</em> tuya"},
-  {es:"las redes sociales",en:"social media",pos:"phrase",ph:"REH-dehs soh-SYAL-ehs",ex:"Demasiado tiempo en las <em>redes</em>"},
-  {es:"tomar una foto",en:"to take a photo",pos:"phrase",ph:"toh-MAR oo-nah FOH-toh",ex:"¿Me puedes <em>tomar una foto</em>?"},
-],
-
-"Venezuelan Expressions":[
-  {es:"¿y eso?",en:"what's that about? / what happened?",pos:"expression",ph:"ee EH-soh",ex:"Me llamaste tarde — <em>¿y eso?</em>"},
-  {es:"arrecho/a",en:"intense / impressive / difficult / angry",pos:"adjective",ph:"ah-RREH-choh",ex:"Ese examen estuvo <em>arrecho</em>"},
-  {es:"chévere",en:"cool / great / awesome",pos:"adjective",ph:"CHEH-beh-reh",ex:"¡Qué <em>chévere</em> ese plan!"},
-  {es:"pana",en:"buddy / friend",pos:"noun",ph:"PAH-nah",ex:"Ese es mi <em>pana</em> de toda la vida"},
-  {es:"espérate",en:"hold on / wait",pos:"expression",ph:"ehs-PEH-rah-teh",ex:"<em>Espérate</em> que te cuento algo"},
-  {es:"coño",en:"wow / damn (exclamation — strong)",pos:"expression",ph:"KOH-nyoh",ex:"<em>¡Coño!</em> ¿Qué pasó?"},
-  {es:"epa",en:"hey / wow / whoa",pos:"expression",ph:"EH-pah",ex:"<em>¡Epa!</em> ¿Cómo estás?"},
-  {es:"que vaina",en:"what a thing / what a mess / ugh",pos:"expression",ph:"keh BAY-nah",ex:"<em>Que vaina</em>, se me olvidó el pasaporte"},
-  {es:"está bien bacano",en:"it's really cool / awesome",pos:"expression",ph:"bah-KAH-noh",ex:"Ese restaurante está bien <em>bacano</em>"},
-  {es:"marico",en:"buddy (very casual, between friends)",pos:"noun",ph:"mah-REE-koh",ex:"Ven acá, <em>marico</em>"},
-  {es:"no joda",en:"no way / seriously? (mild expletive)",pos:"expression",ph:"noh HOH-dah",ex:"<em>No joda</em>, ¿eso pasó de verdad?"},
-  {es:"verga",en:"damn / wow (strong exclamation)",pos:"expression",ph:"BEHR-gah",ex:"<em>¡Verga!</em> ¿Qué fue eso?"},
-  {es:"pues",en:"well / so / then",pos:"filler",ph:"pwehs",ex:"<em>Pues</em>, no sé qué decirte"},
-  {es:"¿qué más?",en:"what else? / how's it going?",pos:"greeting",ph:"keh mahs",ex:"<em>¿Qué más?</em> ¿Todo bien?"},
-  {es:"de pinga",en:"awesome / amazing (vulgar but common)",pos:"expression",ph:"deh PEEN-gah",ex:"Ese concierto estuvo <em>de pinga</em>"},
-  {es:"estoy pegado/a",en:"I'm broke / I have no money",pos:"phrase",ph:"ehs-TOY peh-GAH-doh",ex:"No puedo salir, <em>estoy pegado</em>"},
-  {es:"rumbear",en:"to party / go out",pos:"verb",ph:"room-beh-AR",ex:"Vamos a <em>rumbear</em> esta noche"},
-  {es:"camión",en:"bus (colloquial Venezuela)",pos:"noun (m.)",ph:"kah-MYON",ex:"Voy en el <em>camión</em>"},
-  {es:"el tostón",en:"fried plantain (tostones)",pos:"noun (m.)",ph:"tohs-TON",ex:"Dame unos <em>tostones</em> con queso"},
-  {es:"el pabellón criollo",en:"Venezuelan national dish (rice, beans, beef, plantain)",pos:"noun (m.)",ph:"pah-beh-YON KRYOH-yoh",ex:"Quiero un <em>pabellón criollo</em>"},
-  {es:"las caraotas",en:"black beans (Venezuelan term)",pos:"noun (f. pl.)",ph:"kah-rah-OH-tahs",ex:"Las <em>caraotas</em> están buenísimas"},
-  {es:"la hallaca",en:"Venezuelan tamale (Christmas dish)",pos:"noun (f.)",ph:"ah-YAH-kah",ex:"Mi abuela hace las mejores <em>hallacas</em>"},
-  {es:"el cachito",en:"ham croissant (Venezuelan breakfast)",pos:"noun (m.)",ph:"kah-CHEE-toh",ex:"Un <em>cachito</em> de jamón y queso"},
-  {es:"mi amor",en:"my love / honey (term of endearment)",pos:"expression",ph:"mee ah-MOR",ex:"¿Cómo amaneciste, <em>mi amor</em>?"},
-  {es:"mi vida",en:"my life / sweetheart",pos:"expression",ph:"mee BEE-dah",ex:"Buenos días, <em>mi vida</em>"},
-],
-
-"Common Phrases":[
-  {es:"¿en serio?",en:"seriously? / really?",pos:"expression",ph:"en SEH-ryoh",ex:"<em>¿En serio?</em> No lo puedo creer"},
-  {es:"¡qué bueno!",en:"great! / how good!",pos:"expression",ph:"keh BWEH-noh",ex:"Pasé el examen — <em>¡qué bueno!</em>"},
-  {es:"¡qué pena!",en:"what a shame! / how embarrassing!",pos:"expression",ph:"keh PEH-nah",ex:"<em>¡Qué pena!</em>, llegué tarde"},
-  {es:"no hay problema",en:"no problem",pos:"expression",ph:"noh eye proh-BLEH-mah",ex:"<em>No hay problema</em>, yo lo hago"},
-  {es:"con permiso",en:"excuse me (to pass / leave)",pos:"expression",ph:"kon pehr-MEE-soh",ex:"<em>Con permiso</em>, necesito pasar"},
-  {es:"¿me puede ayudar?",en:"can you help me?",pos:"phrase",ph:"meh PWEH-deh ah-yoo-DAR",ex:"<em>¿Me puede ayudar?</em>, por favor"},
-  {es:"depende",en:"it depends",pos:"expression",ph:"deh-PEN-deh",ex:"¿Vas a ir? <em>Depende</em>"},
-  {es:"a ver",en:"let's see / hmm",pos:"filler",ph:"ah behr",ex:"<em>A ver</em>... ¿qué tenemos aquí?"},
-  {es:"o sea",en:"I mean / in other words",pos:"filler",ph:"oh SEH-ah",ex:"<em>O sea</em>, no entiendo por qué"},
-  {es:"ojalá",en:"hopefully / I hope so",pos:"expression",ph:"oh-hah-LAH",ex:"<em>Ojalá</em> llegues a tiempo"},
-  {es:"¡ánimo!",en:"cheer up! / you can do it!",pos:"expression",ph:"AH-nee-moh",ex:"<em>¡Ánimo!</em> ya casi terminas"},
-  {es:"¡suerte!",en:"good luck!",pos:"expression",ph:"SWEHR-teh",ex:"<em>¡Mucha suerte</em> en la entrevista!"},
-  {es:"¡felicidades!",en:"congratulations!",pos:"expression",ph:"feh-lee-see-DAH-dehs",ex:"<em>¡Felicidades</em> por tu boda!"},
-  {es:"¿verdad?",en:"right? / isn't it?",pos:"tag question",ph:"behr-DAHD",ex:"Es bonito aquí, <em>¿verdad?</em>"},
-  {es:"¿no?",en:"right? / no?",pos:"tag question",ph:"noh",ex:"Tienes hambre, <em>¿no?</em>"},
-  {es:"a propósito",en:"by the way",pos:"expression",ph:"ah proh-POH-see-toh",ex:"<em>A propósito</em>, ¿viste las noticias?"},
-  {es:"al final",en:"in the end / finally",pos:"expression",ph:"al fee-NAL",ex:"<em>Al final</em> todo salió bien"},
-  {es:"sin embargo",en:"however / nevertheless",pos:"conjunction",ph:"seen em-BAR-goh",ex:"Es caro, <em>sin embargo</em> vale la pena"},
-  {es:"además",en:"besides / furthermore",pos:"adverb",ph:"ah-deh-MAHS",ex:"<em>Además</em>, es muy inteligente"},
-  {es:"aunque",en:"although / even though",pos:"conjunction",ph:"OWN-keh",ex:"<em>Aunque</em> llueva, vamos"},
-  {es:"mientras",en:"while / meanwhile",pos:"conjunction",ph:"MYEN-trahs",ex:"<em>Mientras</em> cocino, escucho música"},
-  {es:"en cuanto",en:"as soon as",pos:"conjunction",ph:"en KWAN-toh",ex:"<em>En cuanto</em> llegues, llámame"},
-  {es:"por supuesto",en:"of course",pos:"expression",ph:"por soo-PWES-toh",ex:"<em>Por supuesto</em>, con gusto"},
-  {es:"desde luego",en:"of course / certainly",pos:"expression",ph:"DEHS-deh LWEH-goh",ex:"<em>Desde luego</em> que sí"},
-  {es:"en absoluto",en:"absolutely not / not at all",pos:"expression",ph:"en ab-soh-LOO-toh",ex:"<em>En absoluto</em>, no me molesta"},
-  {es:"más que nada",en:"more than anything",pos:"expression",ph:"mahs keh NAH-dah",ex:"<em>Más que nada</em>, te extraño"},
-  {es:"quizás / quizá",en:"maybe / perhaps",pos:"adverb",ph:"kee-SAHS",ex:"<em>Quizás</em> vaya mañana"},
-  {es:"a veces",en:"sometimes",pos:"adverb",ph:"ah BEH-sehs",ex:"<em>A veces</em> me olvido"},
-  {es:"siempre",en:"always",pos:"adverb",ph:"SYEM-preh",ex:"<em>Siempre</em> llegas tarde"},
-  {es:"nunca / jamás",en:"never",pos:"adverb",ph:"NOON-kah",ex:"<em>Nunca</em> he estado en Venezuela"},
-],
-
-"Sports & Hobbies":[
-  {es:"el fútbol",en:"soccer / football",pos:"noun (m.)",ph:"FOOT-bol",ex:"El <em>fútbol</em> es el deporte más popular"},
-  {es:"el béisbol",en:"baseball",pos:"noun (m.)",ph:"BAYS-bol",ex:"Venezuela es grande en el <em>béisbol</em>"},
-  {es:"nadar",en:"to swim",pos:"verb",ph:"nah-DAR",ex:"Me gusta <em>nadar</em> en el mar"},
-  {es:"correr",en:"to run",pos:"verb",ph:"koh-RREHR",ex:"<em>Corro</em> cinco kilómetros cada día"},
-  {es:"el gimnasio",en:"gym",pos:"noun (m.)",ph:"heem-NAH-syoh",ex:"Voy al <em>gimnasio</em> por las mañanas"},
-  {es:"bailar",en:"to dance",pos:"verb",ph:"bay-LAR",ex:"Me encanta <em>bailar</em> salsa"},
-  {es:"escuchar música",en:"to listen to music",pos:"phrase",ph:"ehs-koo-CHAR MOO-see-kah",ex:"Me relajo <em>escuchando música</em>"},
-  {es:"viajar",en:"to travel",pos:"verb",ph:"byah-HAR",ex:"Me encanta <em>viajar</em>"},
-  {es:"leer",en:"to read",pos:"verb",ph:"leh-EHR",ex:"Leo mucho en mi tiempo libre"},
-  {es:"cocinar",en:"to cook",pos:"verb",ph:"koh-see-NAR",ex:"Me gusta <em>cocinar</em> los fines de semana"},
-  {es:"el partido",en:"game / match",pos:"noun (m.)",ph:"par-TEE-doh",ex:"¿Viste el <em>partido</em> anoche?"},
-  {es:"el equipo",en:"team",pos:"noun (m.)",ph:"eh-KEE-poh",ex:"¿Cuál es tu <em>equipo</em> favorito?"},
-  {es:"ganar",en:"to win",pos:"verb",ph:"gah-NAR",ex:"Nuestro equipo <em>ganó</em>"},
-  {es:"perder",en:"to lose",pos:"verb",ph:"pehr-DEHR",ex:"Perdimos el partido"},
-  {es:"la música",en:"music",pos:"noun (f.)",ph:"MOO-see-kah",ex:"La <em>música</em> venezolana es increíble"},
-  {es:"el concierto",en:"concert",pos:"noun (m.)",ph:"kon-SYEHR-toh",ex:"Vamos a un <em>concierto</em> esta noche"},
-  {es:"el cine",en:"movie theater / cinema",pos:"noun (m.)",ph:"SEE-neh",ex:"¿Vamos al <em>cine</em>?"},
-  {es:"la película",en:"movie / film",pos:"noun (f.)",ph:"peh-LEE-koo-lah",ex:"¿Qué <em>película</em> quieres ver?"},
-  {es:"tomar fotos",en:"to take photos",pos:"phrase",ph:"toh-MAR FOH-tohs",ex:"Me gusta <em>tomar fotos</em>"},
-  {es:"la playa",en:"beach",pos:"noun (f.)",ph:"PLAH-yah",ex:"El fin de semana vamos a la <em>playa</em>"},
-],
-
-"Shopping & Money":[
-  {es:"la tienda",en:"store / shop",pos:"noun (f.)",ph:"TYEN-dah",ex:"Esta <em>tienda</em> tiene de todo"},
-  {es:"el mercado",en:"market",pos:"noun (m.)",ph:"mehr-KAH-doh",ex:"Voy al <em>mercado</em> los sábados"},
-  {es:"el precio",en:"price",pos:"noun (m.)",ph:"PREH-syoh",ex:"¿Cuál es el <em>precio</em>?"},
-  {es:"el descuento",en:"discount",pos:"noun (m.)",ph:"dehs-KWEN-toh",ex:"¿Hay algún <em>descuento</em>?"},
-  {es:"el dinero",en:"money",pos:"noun (m.)",ph:"dee-NEH-roh",ex:"No tengo suficiente <em>dinero</em>"},
-  {es:"el efectivo",en:"cash",pos:"noun (m.)",ph:"eh-fek-TEE-boh",ex:"¿Aceptan <em>efectivo</em>?"},
-  {es:"la tarjeta de crédito",en:"credit card",pos:"noun (f.)",ph:"tar-HEH-tah deh KREH-dee-toh",ex:"¿Puedo pagar con <em>tarjeta</em>?"},
-  {es:"el recibo",en:"receipt",pos:"noun (m.)",ph:"reh-SEE-boh",ex:"¿Me da el <em>recibo</em>?"},
-  {es:"¿cuánto vale?",en:"how much is it worth / how much does it cost?",pos:"phrase",ph:"KWAN-toh BAH-leh",ex:"<em>¿Cuánto vale</em> este collar?"},
-  {es:"está caro/barato",en:"it's expensive / cheap",pos:"phrase",ph:"ehs-TAH KAH-roh",ex:"<em>Está muy caro</em>, ¿tiene algo más barato?"},
-  {es:"me lo llevo",en:"I'll take it",pos:"phrase",ph:"meh loh YEH-boh",ex:"Está perfecto, <em>me lo llevo</em>"},
-  {es:"¿tiene algo más barato?",en:"do you have something cheaper?",pos:"phrase",ph:"TYEH-neh AL-goh mahs bah-RAH-toh",ex:"<em>¿Tiene algo más barato?</em>"},
-  {es:"la oferta",en:"sale / offer / deal",pos:"noun (f.)",ph:"oh-FEHR-tah",ex:"Está en <em>oferta</em> hoy"},
-  {es:"el cambio",en:"change (money) / exchange",pos:"noun (m.)",ph:"KAM-byoh",ex:"No tengo <em>cambio</em>"},
-  {es:"devolver",en:"to return (an item)",pos:"verb",ph:"deh-bol-BEHR",ex:"Quiero <em>devolver</em> esto"},
+  {es:"rosado/a",en:"pink",pos:"adj",ph:"roh-SAH-doh",ex:"Color <em>rosado</em>"},
+  {es:"alto/a",en:"tall",pos:"adj",ph:"AL-toh",ex:"Es muy <em>alta</em>"},
+  {es:"bajo/a",en:"short",pos:"adj",ph:"BAH-hoh",ex:"Es un poco <em>bajo</em>"},
+  {es:"gordo/a",en:"fat / chubby",pos:"adj",ph:"GOR-doh",ex:"Está un poco <em>gordo</em>"},
+  {es:"delgado/a",en:"thin / slim",pos:"adj",ph:"del-GAH-doh",ex:"Está muy <em>delgada</em>"},
+  {es:"simpático/a",en:"nice / friendly",pos:"adj",ph:"seem-PAH-tee-koh",ex:"Es muy <em>simpática</em>"},
+  {es:"inteligente",en:"intelligent",pos:"adj",ph:"een-teh-lee-HEN-teh",ex:"Es muy <em>inteligente</em>"},
+  {es:"fuerte",en:"strong",pos:"adj",ph:"FWEHR-teh",ex:"Es muy <em>fuerte</em>"},
+  {es:"importante",en:"important",pos:"adj",ph:"eem-por-TAN-teh",ex:"Es muy <em>importante</em>"},
+  {es:"diferente",en:"different",pos:"adj",ph:"dee-feh-REN-teh",ex:"Son <em>diferentes</em>"},
+  {es:"interesante",en:"interesting",pos:"adj",ph:"een-teh-reh-SAN-teh",ex:"¡Qué <em>interesante</em>!"},
+  {es:"aburrido/a",en:"boring / bored",pos:"adj",ph:"ah-boo-RREE-doh",ex:"Estoy <em>aburrido</em>"},
+  {es:"orgulloso/a",en:"proud",pos:"adj",ph:"or-goo-YOH-soh",ex:"Estoy muy <em>orgulloso</em>"},
 ],
 
 };
+
 
 const LESSONS = [
 {id:0,unit:"Unit 1 — Foundations",title:"Gender of Nouns",icon:"⚥",level:"beginner",desc:"All nouns are masculine or feminine",steps:[
@@ -1861,6 +1483,181 @@ const LESSONS = [
 ];
 
 let grLesson=null, grStep=0, grCorrect=0, grTotal=0, grAnswered=new Set();
+
+
+// ══════════════════════════════════════════════════════════
+//  FLASHCARD ENGINE
+// ══════════════════════════════════════════════════════════
+var fcDeck=[], fcIdx=0, fcFlipped=false, fcShuffle=false, fcFilteredIdx=null;
+
+function fcInit() {
+  var strip = document.getElementById('catStrip');
+  if (!strip) return;
+  strip.innerHTML = '';
+  Object.keys(FC_DECKS).forEach(function(name) {
+    var b = document.createElement('button');
+    b.className = 'cat-chip' + (name === ST.fcDeckName ? ' active' : '');
+    b.textContent = name + ' (' + FC_DECKS[name].length + ')';
+    b.addEventListener('click', function(){ fcSwitchDeck(name); });
+    strip.appendChild(b);
+  });
+  fcLoadDeck(ST.fcDeckName, true);
+}
+
+function fcSwitchDeck(name) {
+  ST.fcDeckName = name;
+  var s = document.getElementById('fcSearch');
+  if (s) s.value = '';
+  fcFilteredIdx = null;
+  document.querySelectorAll('.cat-chip').forEach(function(c){
+    c.classList.toggle('active', c.textContent.startsWith(name));
+  });
+  fcLoadDeck(name, false);
+  saveState();
+}
+
+function fcLoadDeck(name, restoreIdx) {
+  if (!FC_DECKS[name]) name = 'Essentials';
+  fcDeck = FC_DECKS[name].slice();
+  if (fcShuffle) fcShufArr(fcDeck);
+  fcIdx = restoreIdx ? Math.min(ST.fcIdx || 0, fcDeck.length - 1) : 0;
+  fcFlipped = false;
+  fcRender();
+}
+
+function fcShufArr(a) {
+  for (var i=a.length-1;i>0;i--) {
+    var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;
+  }
+}
+
+function fcGetDeck() {
+  if (fcFilteredIdx) return fcFilteredIdx.map(function(i){return fcDeck[i];});
+  return fcDeck;
+}
+
+function fcRender() {
+  var d = fcGetDeck();
+  if (!d.length) return;
+  var card = d[fcIdx];
+  var w = document.getElementById('cfWord');
+  if (w) w.textContent = card.es;
+  var ph = document.getElementById('cfPh');
+  if (ph) ph.textContent = card.ph || '';
+  var wb = document.getElementById('cfWordB');
+  if (wb) wb.textContent = card.en;
+  var pos = document.getElementById('cfPos');
+  if (pos) pos.textContent = card.pos || '';
+  var ex = document.getElementById('cfEx');
+  if (ex) ex.innerHTML = card.ex || '';
+  var tag = document.getElementById('cfTag');
+  if (tag) tag.textContent = 'Español · ' + ST.fcDeckName;
+  var n = (fcIdx+1)+'/'+d.length;
+  var cn = document.getElementById('cfNum');
+  if (cn) cn.textContent = n;
+  var cnb = document.getElementById('cfNumB');
+  if (cnb) cnb.textContent = n;
+  var pb = document.getElementById('fcPbar');
+  if (pb) pb.style.width = (fcIdx/d.length*100)+'%';
+  var pt = document.getElementById('fcPtxt');
+  if (pt) pt.textContent = n;
+  var ci = document.getElementById('fcCardI');
+  if (ci) ci.classList.remove('flipped');
+  fcFlipped = false;
+  var rate = document.getElementById('fcRate');
+  if (rate) rate.classList.remove('show');
+  var prev = document.getElementById('fcPrev');
+  if (prev) prev.disabled = (fcIdx === 0);
+  var next = document.getElementById('fcNext');
+  if (next) next.disabled = (fcIdx === d.length-1);
+  var di = document.getElementById('deckInf');
+  if (di) di.textContent = d.length + ' cards';
+  var sg = document.getElementById('fcStatG');
+  if (sg) sg.textContent = '✓ ' + ST.fcKnown.size;
+  var sr = document.getElementById('fcStatR');
+  if (sr) sr.textContent = '↩ ' + ST.fcReview.size;
+  ST.fcIdx = fcIdx;
+  saveState();
+  var cw = document.getElementById('fcCardW');
+  if (cw) { cw.style.animation='none'; cw.offsetHeight; cw.style.animation=''; }
+}
+
+function fcTap(e) {
+  if (e.target.classList.contains('cf-audio')) return;
+  fcFlip();
+}
+
+function fcFlip() {
+  fcFlipped = !fcFlipped;
+  var ci = document.getElementById('fcCardI');
+  if (ci) ci.classList.toggle('flipped', fcFlipped);
+  var rate = document.getElementById('fcRate');
+  if (rate) rate.classList.toggle('show', fcFlipped);
+  if (fcFlipped) fcSpeak();
+}
+
+function fcGo(dir) {
+  var d = fcGetDeck();
+  fcIdx = Math.max(0, Math.min(d.length-1, fcIdx+dir));
+  fcFlipped = false;
+  fcRender();
+}
+
+function fcRate(got) {
+  var d = fcGetDeck();
+  var card = d[fcIdx];
+  var id = ST.fcDeckName + '|' + card.es;
+  if (got) { ST.fcKnown.add(id); ST.fcReview.delete(id); }
+  else      { ST.fcReview.add(id); ST.fcKnown.delete(id); }
+  addXP(5);
+  setTimeout(function() {
+    if (fcIdx < d.length-1) { fcIdx++; fcRender(); }
+    else markBlockDone('flash');
+  }, 250);
+}
+
+function fcShufToggle() {
+  fcShuffle = !fcShuffle;
+  var btn = document.getElementById('shufBtn');
+  if (btn) btn.classList.toggle('on', fcShuffle);
+  fcLoadDeck(ST.fcDeckName, false);
+}
+
+function fcSearch_() {
+  var inp = document.getElementById('fcSearch');
+  if (!inp) return;
+  var q = inp.value.trim().toLowerCase();
+  if (!q) { fcFilteredIdx = null; fcIdx = 0; fcRender(); return; }
+  fcFilteredIdx = [];
+  fcDeck.forEach(function(c,i){
+    if (c.es.toLowerCase().includes(q) || c.en.toLowerCase().includes(q)) fcFilteredIdx.push(i);
+  });
+  fcIdx = 0;
+  fcRender();
+}
+
+function fcSpeak() {
+  var d = fcGetDeck();
+  if (!d.length || !window.speechSynthesis) return;
+  var word = d[fcIdx].es;
+  var btnId = fcFlipped ? 'cfAB' : 'cfAF';
+  var btn = document.getElementById(btnId);
+  if (btn) { btn.classList.add('on'); btn.textContent = '🔉'; }
+  var u = new SpeechSynthesisUtterance(word);
+  u.lang = 'es-MX'; u.rate = 0.82;
+  var voices = window.speechSynthesis.getVoices();
+  var v = voices.find(function(v){return v.lang.startsWith('es');});
+  if (v) u.voice = v;
+  u.onend = function() { if(btn){btn.classList.remove('on');btn.textContent='🔊';} };
+  u.onerror = function() { if(btn){btn.classList.remove('on');btn.textContent='🔊';} };
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(u);
+}
+
+if (window.speechSynthesis) {
+  window.speechSynthesis.onvoiceschanged = function(){};
+}
 
 function grBuildList() {
   const el = document.getElementById('grListWrap');
@@ -3126,7 +2923,7 @@ function init() {
   conjBuildUI();
   rpBuildList();
   testBuildHome();
-  // Auto-save every 30s
+  pracBuildHome();
   setInterval(saveState, 30000);
 }
 
